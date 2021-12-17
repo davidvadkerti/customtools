@@ -1,4 +1,15 @@
 title: Text Note Types schedule
 author: David Vadkerti
-tooltip: Lists all Text Note Types with count of instances and basic parameter values
-highlight: new
+tooltip: >-
+  Lists all Text Note Types with count of instances and basic parameter values.  
+
+  
+  After clicking on ID you can Select all instances in the project.
+  Note that you cannot select Text Note Styles which are used in the Schedules, Schedule Templates and Legends this way.
+
+
+  You can use pyRevit's List Selection as Clickable Links tool to find specific Text Note instances
+
+
+  NEW: Creator column added
+highlight: updated

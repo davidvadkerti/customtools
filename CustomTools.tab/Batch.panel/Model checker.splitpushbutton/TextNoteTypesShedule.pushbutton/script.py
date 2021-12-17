@@ -4,7 +4,7 @@ from pyrevit import script
 from pyrevit import forms
 from pyrevit import output
 
-from Autodesk.Revit.DB import FilteredElementCollector #, BuiltInCategory
+from Autodesk.Revit.DB import FilteredElementCollector
 from Autodesk.Revit.DB import RevisionCloud, Revision, TextNoteType, TextNote
 
 from pyrevit.coreutils import Timer
@@ -12,13 +12,14 @@ from customOutput import hmsTimer, ct_icon, file_name_getter
 
 doc = __revit__.ActiveUIDocument.Document
 output = script.get_output()
+output.set_width(1000)
 
 # changing icon
 ct_icon(output)
 
 timer = Timer()
 # heading
-output.print_md("# Text Note Type schedule")
+output.print_md("# TEXT NOTE TYPE SCHEDULE")
 
 textNoteType_collector = FilteredElementCollector(doc).OfClass(TextNoteType).ToElements()
 textNote_collector = FilteredElementCollector(doc).OfClass(TextNote).WhereElementIsNotElementType().ToElements()
@@ -28,7 +29,7 @@ text_note_types = {}
 for tn in textNote_collector:
     tn_type_id = tn.GetTypeId().ToString()
     try:
-        text_note_types[tn_type_id] +=1
+        text_note_types[tn_type_id] += 1
     except:
         text_note_types[tn_type_id] = 1
 
@@ -43,12 +44,13 @@ for text_note in textNoteType_collector:
     tb_visibility = text_note.get_Parameter(DB.BuiltInParameter.TEXT_BOX_VISIBILITY).AsInteger()
     width_factor = text_note.get_Parameter(DB.BuiltInParameter.TEXT_WIDTH_SCALE).AsDouble()
     text_note_id = text_note.Id
+    text_note_type_creator = DB.WorksharingUtils.GetWorksharingTooltipInfo(revit.doc, text_note_id).Creator 
     try:
         count = text_note_types[text_note_id.ToString()]
     except:
         count = 0
 
-    paramList = [text_note_name, font, size, bold, background, tb_visibility, width_factor, output.linkify(text_note_id), count]
+    paramList = [text_note_name, font, size, bold, background, tb_visibility, width_factor, output.linkify(text_note_id), count, text_note_type_creator]
 
     scheduleData.append(paramList)
 
@@ -59,8 +61,8 @@ sortedScheduleData = sorted(scheduleData, key=lambda x: int(x[8]))
 if sortedScheduleData:
     output.print_table(table_data=sortedScheduleData,
                        title = file_name_getter(doc),
-                       columns=["Text Note Type", "Font", "Size", "Bold", "Background", "Text Box Visibility" ,"Width Factor", "Text Note Type ID", "Count"],
-                       formats=['', '', '', '', '', '', '', '', ''])
+                       columns=["Text Note Type", "Font", "Size", "Bold", "Background", "Text Box Visibility" ,"Width Factor", "Text Note Type ID", "Count", "Creator"],
+                       formats=['', '', '', '', '', '', '', '', '', ''])
 # if there are no data print status claim
 else:
     print("There are no Text Note Types in the Project")
