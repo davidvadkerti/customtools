@@ -1,0 +1,9 @@
+title: Line Style Usage
+author: David Vadkerti
+tooltip: >-
+  Lists counts per each Line Style in the project.
+  After clicking on ID you can Select all instances in the project.
+
+
+  You can use pyRevit's List Selection as Clickable Links tool to find specific Text Note instances
+highlight: new
