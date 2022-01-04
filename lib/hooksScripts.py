@@ -4,8 +4,8 @@ from customOutput import def_hookLogs, def_revitBuildLogs, def_revitBuilds
 from customOutput import def_massMessagePath, def_syncLogPath, def_openingLogPath, def_dashboardsPath
 
 # version of CustomTools
-releasedVersion = "0.9"
-snapshot = "220103"
+releasedVersion = "0.9.1"
+snapshot = "220104"
 
 # logging to server
 def hooksLogger(log_string, doc):
