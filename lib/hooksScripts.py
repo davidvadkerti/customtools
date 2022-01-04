@@ -61,6 +61,7 @@ def versionLogger(releasedVersion,snapshot):
   from pyrevit import revit, _HostApplication
   from pyrevit import forms, script
   from stringFormating import listFromString
+
   user_name = getpass.getuser()
   datestamp = str(datetime.now())
 
@@ -69,20 +70,24 @@ def versionLogger(releasedVersion,snapshot):
 
   # showing of dialog box with warning if wrong revit build
   def dialogBox(build):
-     res = forms.alert("POZOR!\n\n"
-                       "Používaš zlý Revit Build! To môže poškodiť model.\n"
-                       "\n"
-                       "Správne Revit Buildy sú " + " alebo ".join(company_build),
-                       title="Revit Build",
-                       footer="CustomTools Hooks",
-                       options=["Chcem len otvoriť súbor bez synchronizácie",
-                                "Ako môžem tento problém opraviť?"])
-     if res  == "Chcem len otvoriť súbor bez synchronizácie":
-        pass
-     if res  == "Ako môžem tento problém opraviť?":
-        url = 'https://gfi.miraheze.org/wiki/Aktualizácia_Revitu'
-        script.open_url(url)
-     else:
+    from hook_translate import hook_texts, lang
+    title = "Revit Build"
+    # the language value is read from pyrevit config file
+    lang = lang()
+
+    # WARNING WINDOW
+    res = forms.alert(hook_texts[lang][title]["text"] + ", ".join(company_build),
+                  options = hook_texts[lang][title]["buttons"],
+                  title = title,
+                  footer = "CustomTools Hooks")
+    # Open without sync
+    if res  == hook_texts[lang][title]["buttons"][0]:
+      pass
+    # More info
+    if res  == hook_texts[lang][title]["buttons"][1]:
+      url = 'https://gfi.miraheze.org/wiki/Aktualizácia_Revitu'
+      script.open_url(url)
+    else:
       pass
 
   hostapp = _HostApplication()
@@ -92,9 +97,10 @@ def versionLogger(releasedVersion,snapshot):
   try:
     company_build = listFromString(user_config.CustomToolsSettings.revitBuilds)
     # just temporary for changing company build
-    if "20210420_1515(x64)" in company_build or "20211103_1515(x64)" in company_build:
-      user_config.CustomToolsSettings.revitBuilds = "20210420_1515(x64), 20210804_1515(x64), 20211103_1515(x64)"
-      company_build = listFromString(user_config.CustomToolsSettings.revitBuilds)
+    # if "20210420_1515(x64)" in company_build or "20211103_1515(x64)" in company_build:
+    #   user_config.CustomToolsSettings.revitBuilds = "20210420_1515(x64), 20210804_1515(x64), 20211103_1515(x64)"
+    #   company_build = listFromString(user_config.CustomToolsSettings.revitBuilds)
+
   # if parameter doesnt exist in config file
   except:
     company_build = listFromString(def_revitBuilds)
