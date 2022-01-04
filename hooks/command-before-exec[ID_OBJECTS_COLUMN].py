@@ -1,28 +1,32 @@
 # -*- coding: UTF-8 -*-
-
 from pyrevit import EXEC_PARAMS
 from pyrevit import forms, script
 
+from hook_translate import hook_texts, lang
+
 doc = __revit__.ActiveUIDocument.Document
 
-res = forms.alert("POZOR!\n\n"
-                  "Všetky nosné stĺpy by mali byť vymodelované ako Structural a nie ako Architectural Column.\n"
-                  "- Architectural Columns sa nezobrazia v statickom modeli.\n"
-                  "- v budúcnosti bude musieť niekto po tebe upraviť všetky stĺpy na Structural",
-                  title="Architectural column",                  
-                  footer="CustomTools Hooks",
-                  options=["Vytvoriť aj napriek tomu Architectural Column",
-                           "Zrušiť",
-                           "Viac info o Architectural Columns"])
-if res  == "Vytvoriť aj napriek tomu Architectural Column":
+title = "Architectural column"
+# the language value is read from pyrevit config file
+lang = lang()
+
+# WARNING WINDOW
+res = forms.alert(hook_texts[lang][title]["text"],
+                  options = hook_texts[lang][title]["buttons"],
+                  title = title,
+                  footer = "CustomTools Hooks")
+
+# Create
+if res  == hook_texts[lang][title]["buttons"][0]:
    EXEC_PARAMS.event_args.Cancel = False
    # logging to server
    from hooksScripts import hooksLogger
-   hooksLogger("Architecural Column", doc)
-
-elif res  == "Zrušiť":
+   hooksLogger(title, doc)
+# Cancel
+elif res  == hook_texts[lang][title]["buttons"][1]:
    EXEC_PARAMS.event_args.Cancel = True
-elif res  == "Viac info o Architectural Columns":
+# More info
+elif res  == hook_texts[lang][title]["buttons"][2]:
    EXEC_PARAMS.event_args.Cancel = True
    url = 'https://gfi.miraheze.org/wiki/Postupy,_ktor%C3%BDm_je_potrebn%C3%A9_sa_vyhn%C3%BA%C5%A5_-_Revit#St.C4.BApy'
    script.open_url(url)

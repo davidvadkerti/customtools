@@ -2,43 +2,34 @@
 from pyrevit import EXEC_PARAMS
 from pyrevit import forms, script
 
+from hook_translate import hook_texts, lang
+
 doc = __revit__.ActiveUIDocument.Document
 
-# img = 'https://traviswhitecommunications.com/wp-content/uploads/2012/09/dont-do-it.jpg'
-# script.open_url(img)
+title = "Ramp"
+# the language value is read from pyrevit config file
+lang = lang()
 
-# forms.toast(
-#     "Toto nerob!",
-#     title="STOP",
-#     appid="CustomTools",
-#     click="https://eirannejad.github.io/pyRevit/",
-#     actions={
-#         "GFI Wiki":"https://gfi.miraheze.org/m/3vk"
-#         },
-#     icon="C:\Users\davidv\Desktop\work families\pyrevit\CustomTools.extension\hooks\icon.png")
+# WARNING WINDOW
+res = forms.alert(hook_texts[lang][title]["text"],
+                  options = hook_texts[lang][title]["buttons"],
+                  title = title,
+                  footer = "CustomTools Hooks")
 
-res = forms.alert("POZOR!\n\n"
-                  "Rampy je lepšie modelovať ako Floor v spáde.\n"
-                  "- rampy nemajú možnosť pridávať vrstvy\n"
-                  "- na rampy sa nedá umiestniť šípka spádu ani plavák\n"
-                  "- v budúcnosti bude musieť po tebe niekto rampu premodelovať na Floor",
-                  title="Ramp",
-                  footer="CustomTools Hooks",
-                  options=["Aj napriek tomu vytvoriť rampu",
-                           "Zrušiť",
-                           "Viac info o kategórii Ramp"])
-if res  == "Aj napriek tomu vytvoriť rampu":
+# BUTTONS
+# Create
+if res  == hook_texts[lang][title]["buttons"][0]:
    EXEC_PARAMS.event_args.Cancel = False
    # logging to server
    from hooksScripts import hooksLogger
    hooksLogger("Ramp", doc)
-
-elif res  == "Zrušiť":
+# Cancel
+elif res  == hook_texts[lang][title]["buttons"][1]:
    EXEC_PARAMS.event_args.Cancel = True
-elif res  == "Viac info o kategórii Ramp":
+# More info
+elif res  == hook_texts[lang][title]["buttons"][2]:
    EXEC_PARAMS.event_args.Cancel = True
    url = 'https://gfi.miraheze.org/wiki/Postupy,_ktor%C3%BDm_je_potrebn%C3%A9_sa_vyhn%C3%BA%C5%A5_-_Revit#Rampy'
-   script.open_url(url)
-   
+   script.open_url(url) 
 else:
    EXEC_PARAMS.event_args.Cancel = True
