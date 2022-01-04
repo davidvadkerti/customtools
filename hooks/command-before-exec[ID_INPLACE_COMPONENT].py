@@ -2,13 +2,13 @@
 from pyrevit import EXEC_PARAMS
 from pyrevit import forms, script
 
-from hook_translate import hook_texts
+from hook_translate import hook_texts, lang
 
 doc = __revit__.ActiveUIDocument.Document
 
 title = "In Place Family"
-# the language value will be read from the pyRevit config file - I will add this later
-lang = "EN"
+# the language value is read from pyrevit config file
+lang = lang()
 
 # WARNING WINDOW
 res = forms.alert(hook_texts[lang][title]["text"],

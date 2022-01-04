@@ -119,10 +119,12 @@
                 Click="dashboardsPath"/>
         </StackPanel>
         <StackPanel Grid.Row="7" Grid.ColumnSpan="1" Margin="0,0,0,0">
-            <Label x:Name="label08" Content="Language" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="12" FontWeight="bold" Margin="-5, 0, 0, 0"/>
+            <Label x:Name="label08" Content="Language for the Hooks" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="12" FontWeight="bold" Margin="-5, 0, 0, 0"/>
             <ComboBox x:Name="language_cb">
-                <ComboBoxItem Content="English/EN"></ComboBoxItem>  
-                <ComboBoxItem Content="Slovak/SK"></ComboBoxItem>
+                <ComboBoxItem Content="English - EN"></ComboBoxItem>  
+                <ComboBoxItem Content="Slovensky - Slovak - SK"></ComboBoxItem>
+                <ComboBoxItem Content="Deutsch - German - DE"></ComboBoxItem>
+                <ComboBoxItem Content="Français - French - FR"></ComboBoxItem>
             </ComboBox>
         </StackPanel>
 
