@@ -18,7 +18,6 @@ def lang():
 
 # dictionary of texts in the hooks in various languages
 hook_texts = {
-
 # SLOVAK
 "SK":{
 "Shared Parameters":{
@@ -161,7 +160,6 @@ Rampy je lepšie modelovať ako Floor v spáde.\n\
 "Zrušiť",
 "Viac info o kategórii Ramp"],
 },
-
 "Architectural column":{
 "text":
 "POZOR!\n\n\
@@ -174,7 +172,6 @@ Všetky nosné stĺpy by mali byť vymodelované ako Structural a nie ako Archit
 "Viac info o Architectural Columns"],
 },
 },
-
 # ENGLISH
 "EN":{
 "Shared Parameters":{
@@ -206,7 +203,6 @@ Do you really want to delete these views?\n",
 ["Cancel",
 "Delete"],
 },
-
 "Save List Of Opened Views":{
 "text":
 "Do you want to save a list of open Views?",
@@ -318,7 +314,6 @@ It is better to model Ramps as Floors with defined slope.\n\
 "Cancel",
 "More info about the Ramp Category"],
 },
-
 "Architectural column":{
 "text":
 "WARNING!\n\n\
@@ -331,7 +326,6 @@ In general, Columns should be modeled as Structural Columns not as Architectural
 "More info about Architectural Columns"],
 },
 },
-
 # GERMAN
 "DE":{
 "Shared Parameters":{
@@ -363,7 +357,6 @@ Wollen Sie dieses Ansichten wirklich löschen?\n",
 ["Abbrechen",
 "Löschen"],
 },
-
 "Save List Of Opened Views":{
 "text":
 "Möchten Sie eine Liste der offenen Ansichten speichern?",
@@ -475,7 +468,6 @@ Es ist besser, Rampen als Geschossdecken mit definierter Neigung zu modellieren.
 "Abbrechen",
 "Mehr Infos zur Kategorie Rampe"],
 },
-
 "Architectural column":{
 "text":
 "WARNUNG!\n\n\
@@ -488,7 +480,6 @@ Im Allgemeinen sollten Stützen als Tragwerkstützen und nicht als Architekturst
 "Mehr Informationen über Architekturstützen"],
 },
 },
-
 # FRENCH
 "FR":{
 "Shared Parameters":{
@@ -519,7 +510,6 @@ Voulez-vous vraiment supprimer ces vues?\n",
 ["Annuler",
 "Supprimer"],
 },
-
 "Save List Of Opened Views":{
 "text":
 "Souhaitez-vous enregistrer une liste des vues ouvertes ?",
@@ -630,7 +620,6 @@ Il est préférable de modéliser les rampes comme des planchers avec une pente 
 "Annuler",
 "Plus d'infos sur la catégorie rampe"],
 },
-
 "Architectural column":{
 "text":
 "AVERTISSEMENT!\n\n\
