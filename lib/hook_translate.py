@@ -179,7 +179,7 @@ Všetky nosné stĺpy by mali byť vymodelované ako Structural a nie ako Archit
 "WARNING!\n\n\
 When you create a new Shared Paramter, first see if a similar parameter is already created.\n\n\
 - Use the 'Shared Parameter Schedule' tool.\n\
-- Do not use accents.",
+- Do not use accented characters.",
 "buttons":
 ["View Shared Parameter  list on Wiki",
 "Edit Parameters",
@@ -225,7 +225,7 @@ The floor plan boundaries of Roofs by Extrusion can be changed only using Voids"
 "Load Family":{
 "text":
 "WARNING!\n\n\
-Family should be under 1 MB in size.\n\
+Family should be as small as possible. Preferably under 1 MB in size.\n\
 Always check the file size before uploading.\n\n\
 Isn't Family overmodelled?",
 "buttons":
@@ -258,11 +258,11 @@ Did you follow the workaround on the link below?",
 "WARNING!\n\n\
 In Place Families should be used only in exceptional cases,\n\
 hence they have lot of disadvantages:\n\
-- have problematic scheduling options\n\
-- have no Level asigned\n\
+- problematic scheduling options\n\
+- no Level asigned\n\
 - each copy is independent family instance\n\
-- have limited support for parametric modeling\n\n\
-Do you really want create In Place Family?",
+- limited support for parametric modeling\n\n\
+Do you really want to create In Place Family?",
 "buttons":
 ["Create",
 "Cancel",
@@ -271,8 +271,8 @@ Do you really want create In Place Family?",
 "Import CAD file":{
 "text":
 "WARNING!\n\n\
-You should only import CAD in exceptional cases.\n\
-Never import CAD directly into the model, but into a clean RVT file.\n\n\
+You should only import CAD files in exceptional cases.\n\
+Never import CAD file directly into the model, but into a clean RVT file.\n\n\
 Are you sure you know what you are doing?",
 "buttons":
 ["Import",
@@ -295,7 +295,7 @@ Do you really want to do this?",
 "WARNING!\n\n\
 When you create a new Shared Paramter, first see if a similar parameter is already created.\n\n\
 - Use the 'Shared Parameter Schedule' tool.\n\
-- Do not use accents.",
+- Do not use accented characters.",
 "buttons":
 ["View Shared Parameter  list on Wiki",
 "Edit Parameters",
