@@ -25,9 +25,12 @@ def dialogBox():
     # More info
     elif res  == hook_texts[lang][title]["buttons"][2]:
       EXEC_PARAMS.event_args.Cancel = True
-      url = 'https://gfi.miraheze.org/w/index.php?search=unpin&title=Špeciálne%3AHľadanie&go=Ísť+na'
+      if lang == "SK":
+        url = 'https://gfi.miraheze.org/w/index.php?search=unpin&title=Špeciálne%3AHľadanie&go=Ísť+na'
+      else:
+        url = 'https://customtools.notion.site/Procedures-to-be-avoided-e6e4ce335d544040acee210943afa237'  
       script.open_url(url)
     else:
       EXEC_PARAMS.event_args.Cancel = True
 
-hookTurnOff(dialogBox,10)    
+hookTurnOff(dialogBox,10)

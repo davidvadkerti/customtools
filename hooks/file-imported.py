@@ -51,7 +51,10 @@ def dialogBox():
         uiapp.PostCommand(Command_ID)
     # More info
     elif res  == hook_texts[lang][title]["buttons"][2]:
-        url = 'https://gfi.miraheze.org/wiki/Linknutie_DWG_s%C3%BAboru_do_Revitu#HLAVN.C3.89_Z.C3.81SADY'
+        if lang == "SK":
+            url = 'https://gfi.miraheze.org/wiki/Linknutie_DWG_s%C3%BAboru_do_Revitu#HLAVN.C3.89_Z.C3.81SADY'
+        else:
+            url = 'https://customtools.notion.site/Procedures-to-be-avoided-e6e4ce335d544040acee210943afa237'
         script.open_url(url)
     else:
         pass

@@ -31,7 +31,10 @@ def dialogBox():
   # More info
   elif res  == hook_texts[lang][title]["buttons"][2]:
       EXEC_PARAMS.event_args.Cancel = True
-      url = 'https://gfi.miraheze.org/wiki/Linknutie_DWG_s%C3%BAboru_do_Revitu'
+      if lang == "SK":
+        url = 'https://gfi.miraheze.org/wiki/Linknutie_DWG_s%C3%BAboru_do_Revitu'
+      else:
+        url = 'https://customtools.notion.site/Procedures-to-be-avoided-e6e4ce335d544040acee210943afa237'
       script.open_url(url)
   else:
       EXEC_PARAMS.event_args.Cancel = True

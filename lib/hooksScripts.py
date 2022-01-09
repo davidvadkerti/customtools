@@ -4,8 +4,8 @@ from customOutput import def_hookLogs, def_revitBuildLogs, def_revitBuilds
 from customOutput import def_massMessagePath, def_syncLogPath, def_openingLogPath, def_dashboardsPath
 
 # version of CustomTools
-releasedVersion = "0.9.2_beta"
-snapshot = "220108"
+releasedVersion = "0.9.2"
+snapshot = "220109"
 
 # logging to server
 def hooksLogger(log_string, doc):
@@ -85,7 +85,10 @@ def versionLogger(releasedVersion,snapshot):
       pass
     # More info
     if res  == hook_texts[lang][title]["buttons"][1]:
-      url = 'https://gfi.miraheze.org/wiki/Aktualizácia_Revitu'
+      if lang == "SK":
+        url = 'https://gfi.miraheze.org/wiki/Aktualizácia_Revitu'
+      else:
+        url = 'https://customtools.notion.site/Procedures-to-be-avoided-e6e4ce335d544040acee210943afa237'
       script.open_url(url)
     else:
       pass

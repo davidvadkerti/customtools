@@ -28,7 +28,10 @@ elif res  == hook_texts[lang][title]["buttons"][1]:
 # More info
 elif res  == hook_texts[lang][title]["buttons"][2]:
    EXEC_PARAMS.event_args.Cancel = True
-   url = 'https://gfi.miraheze.org/wiki/Postupy,_ktor%C3%BDm_je_potrebn%C3%A9_sa_vyhn%C3%BA%C5%A5_-_Revit#St.C4.BApy'
+   if lang == "SK":
+      url = 'https://gfi.miraheze.org/wiki/Postupy,_ktor%C3%BDm_je_potrebn%C3%A9_sa_vyhn%C3%BA%C5%A5_-_Revit#St.C4.BApy'
+   else:
+      url = 'https://customtools.notion.site/Procedures-to-be-avoided-e6e4ce335d544040acee210943afa237'
    script.open_url(url)
 else:
    EXEC_PARAMS.event_args.Cancel = True

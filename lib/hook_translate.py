@@ -17,6 +17,8 @@ def lang():
     return language_list[lang_index]
 
 # dictionary of texts in the hooks in various languages
+# do not edit manually, this dictionary is created from an airtable base
+# all changes should be made there
 hook_texts = {
 # SLOVAK
 "SK":{

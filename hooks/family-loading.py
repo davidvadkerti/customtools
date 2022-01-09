@@ -40,7 +40,10 @@ def dialogBox():
             EXEC_PARAMS.event_args.Cancel()
          # More info
          elif res  == hook_texts[lang][title]["buttons"][2]:
-            url = 'https://gfi.miraheze.org/wiki/Chyby_vo_families_Revitu#Ve.C4.BEkos.C5.A5_Family'
+            if lang == "SK":
+               url = 'https://gfi.miraheze.org/wiki/Chyby_vo_families_Revitu#Ve.C4.BEkos.C5.A5_Family'
+            else:
+               url = 'https://customtools.notion.site/Procedures-to-be-avoided-e6e4ce335d544040acee210943afa237'
             script.open_url(url)
             EXEC_PARAMS.event_args.Cancel()
          else:
