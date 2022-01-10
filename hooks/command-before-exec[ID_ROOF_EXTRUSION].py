@@ -8,25 +8,34 @@ doc = __revit__.ActiveUIDocument.Document
 
 # showing of dialog box with warning
 def dialogBox():
-   res = forms.alert("POZOR!\n\n"
-                     "Roof By Extrusion by sa mali používať len výnimočne.\n"
-                     "Ak potrebuješ spraviť strechu v spáde, použi Floor a nastav spád.\n"
-                     "Strechám vymodelovaným ako Roof by Extrusion sa nedá upraviť pôdorysný obrys inak ako Voidom.",
-                     title="Roof by Extrusion",
-                     footer="CustomTools Hooks",
-                     options=["Vytvoriť Roof by Extrusion",
-                              "Zrušiť",
-                              "Viac info o Roof by Extrusion"])
-   if res  == "Vytvoriť Roof by Extrusion":
+   from hook_translate import hook_texts, lang
+
+   title = "Roof by Extrusion"
+   # the language value is read from pyrevit config file
+   lang = lang()
+
+   # WARNING WINDOW
+   res = forms.alert(hook_texts[lang][title]["text"],
+                    options = hook_texts[lang][title]["buttons"],
+                    title = title,
+                    footer = "CustomTools Hooks")
+   # BUTTONS
+   # Create
+   if res  == hook_texts[lang][title]["buttons"][0]:
       EXEC_PARAMS.event_args.Cancel = False
       # logging to server
       from hooksScripts import hooksLogger
-      hooksLogger("Roof by Extrusion", doc)
-   elif res  == "Zrušiť":
+      hooksLogger(title, doc)
+   # Cancel
+   elif res  == hook_texts[lang][title]["buttons"][1]:
       EXEC_PARAMS.event_args.Cancel = True
-   elif res  == "Viac info o Roof by Extrusion":
+   # More info
+   elif res  == hook_texts[lang][title]["buttons"][2]:
       EXEC_PARAMS.event_args.Cancel = True
-      url = 'https://gfi.miraheze.org/wiki/Postupy,_ktor%C3%BDm_je_potrebn%C3%A9_sa_vyhn%C3%BA%C5%A5_-_Revit#Roofs'
+      if lang == "SK":
+         url = 'https://gfi.miraheze.org/wiki/Postupy,_ktor%C3%BDm_je_potrebn%C3%A9_sa_vyhn%C3%BA%C5%A5_-_Revit#Roofs'
+      else:
+         url = 'https://customtools.notion.site/Procedures-to-be-avoided-e6e4ce335d544040acee210943afa237'
       script.open_url(url)
    else:
       EXEC_PARAMS.event_args.Cancel = True

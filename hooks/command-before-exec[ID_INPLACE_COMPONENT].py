@@ -2,32 +2,38 @@
 from pyrevit import EXEC_PARAMS
 from pyrevit import forms, script
 
+from hook_translate import hook_texts, lang
+
 doc = __revit__.ActiveUIDocument.Document
 
-res = forms.alert("POZOR!\n\n"
-                  "In Place Families by mali byť použité len vo výnimočných prípadoch, "
-                  "keďže majú oproti Loadable Families veľa nevýhod: \n"
-                  " - problematické vykazovanie\n"
-                  " - nemajú identifikáciu o levele, na ktorom sú umiestnené\n"
-                  " - pri skopírovaní prvku vzniká nový nezávislý originál\n"
-                  " - nemožnosť modelovať parametricky\n\n"
-                  "Chceš naozaj vytvoriť In Place Family?",
-                  options=["Vytvoriť",
-                           "Zrušiť",
-                           "Viac info o In Place Families"],
-                  title="In Place Family",
-                  footer="CustomTools Hooks")
-if res  == "Vytvoriť":
+title = "In Place Family"
+# the language value is read from pyrevit config file
+lang = lang()
+
+# WARNING WINDOW
+res = forms.alert(hook_texts[lang][title]["text"],
+                  options = hook_texts[lang][title]["buttons"],
+                  title = title,
+                  footer = "CustomTools Hooks")
+
+# BUTTONS
+# Create
+if res  == hook_texts[lang][title]["buttons"][0]:
    EXEC_PARAMS.event_args.Cancel = False
    # logging to server
    from hooksScripts import hooksLogger
    hooksLogger("Inplace Component", doc)
 
-elif res  == "Zrušiť":
+# Cancel
+elif res  == hook_texts[lang][title]["buttons"][1]:
    EXEC_PARAMS.event_args.Cancel = True
-elif res  == "Viac info o In Place Families":
+# More info
+elif res  == hook_texts[lang][title]["buttons"][2]:
    EXEC_PARAMS.event_args.Cancel = True
-   url = 'https://gfi.miraheze.org/wiki/In-place_Families'
+   if lang == "SK":
+      url = 'https://gfi.miraheze.org/wiki/In-place_Families'
+   else:
+      url = 'https://customtools.notion.site/Procedures-to-be-avoided-e6e4ce335d544040acee210943afa237'
    script.open_url(url)
 else:
    EXEC_PARAMS.event_args.Cancel = True

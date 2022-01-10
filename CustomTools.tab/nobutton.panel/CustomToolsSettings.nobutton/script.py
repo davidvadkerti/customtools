@@ -57,9 +57,11 @@ class ctSettingsWindow(forms.WPFWindow):
             user_config.CustomToolsSettings.dashboardsPath = def_dashboardsPath
         # language
         try:
-            self.language_cb.SelectedItem = user_config.CustomToolsSettings.language
+            self.language_cb.SelectedIndex = user_config.CustomToolsSettings.language
         except:
-            user_config.CustomToolsSettings.language = str(def_language)
+            # user_config.CustomToolsSettings.language = str(def_language)
+            user_config.CustomToolsSettings.language = def_language
+
 
         user_config.save_changes()
 
@@ -70,6 +72,7 @@ class ctSettingsWindow(forms.WPFWindow):
         self.syncLogPath_tb.Text = user_config.CustomToolsSettings.syncLogPath
         self.openingLogPath_tb.Text = user_config.CustomToolsSettings.openingLogPath
         self.dashboardsPath_tb.Text = user_config.CustomToolsSettings.dashboardsPath
+        self.language_cb.SelectedIndex = user_config.CustomToolsSettings.language
 
     # saves values to config file
     def process_text(self, sender, args):
@@ -81,7 +84,7 @@ class ctSettingsWindow(forms.WPFWindow):
         user_config.CustomToolsSettings.syncLogPath = str(self.syncLogPath_tb.Text)
         user_config.CustomToolsSettings.openingLogPath = str(self.openingLogPath_tb.Text)
         user_config.CustomToolsSettings.dashboardsPath = str(self.dashboardsPath_tb.Text)
-        user_config.CustomToolsSettings.language = str(self.language_cb.SelectedItem)
+        user_config.CustomToolsSettings.language = self.language_cb.SelectedIndex
 
         # print(user_config.CustomToolsSettings.hookLogs)
         # print(user_config.CustomToolsSettings.revitBuildLogs)
@@ -89,6 +92,7 @@ class ctSettingsWindow(forms.WPFWindow):
         # print(user_config.CustomToolsSettings.massMessagePath)
         # print(user_config.CustomToolsSettings.syncLogPath)
         # print(user_config.CustomToolsSettings.openingLogPath)
+        # print(user_config.CustomToolsSettings.language)
 
     # resets to default values
     def reset(self, sender, args):
@@ -99,7 +103,7 @@ class ctSettingsWindow(forms.WPFWindow):
         self.syncLogPath_tb.Text = def_syncLogPath
         self.openingLogPath_tb.Text = def_openingLogPath
         self.dashboardsPath_tb.Text = def_dashboardsPath
-        self.language_cb.SelectedItem = def_language
+        self.language_cb.SelectedIndex = def_language
 
     # functions for set buttons
     def hookLogs(self, sender, args):

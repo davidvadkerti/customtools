@@ -5,7 +5,6 @@ from hooksScripts import hookTurnOff
 
 import os.path as op
 
-
 # showing of dialog box with warning
 def dialogBox():
    doc = __eventargs__.Document
@@ -18,24 +17,33 @@ def dialogBox():
 
       # checking if family is larger than 1 megabyte 
       if famSize > 1048576:
-         res = forms.alert("POZOR!\n\n"
-                          "Family by mala mať veľkosť pod 1 MB.\n"
-                           "Pred naloadovaním si vždy skontroluj veľkosť súboru.\n\n"
-                           "Nie je Family príliš detailne vymodelovaná?",
-                           title="Load Family",
-                           footer="CustomTools Hooks",
-                           options=["Zrušiť",
-                                    "Naloadovať",
-                                    "Viac info o veľkosti Families"])
-         if res  == "Naloadovať":
+         from hook_translate import hook_texts, lang
+
+         title = "Load Family"
+         # the language value is read from pyrevit config file
+         lang = lang()
+
+         # WARNING WINDOW
+         res = forms.alert(hook_texts[lang][title]["text"],
+                          options = hook_texts[lang][title]["buttons"],
+                          title = title,
+                          footer = "CustomTools Hooks")
+         # BUTTONS
+         # Load
+         if res  == hook_texts[lang][title]["buttons"][1]:
             pass
             # logging to server - cannot access active document
             from hooksScripts import hooksLogger
             hooksLogger("Family loading over 1 MB", doc)
-         elif res  == "Zrušiť":
+         # Cancel
+         elif res  == hook_texts[lang][title]["buttons"][0]:
             EXEC_PARAMS.event_args.Cancel()
-         elif res  == "Viac info o veľkosti Families":
-            url = 'https://gfi.miraheze.org/wiki/Chyby_vo_families_Revitu#Ve.C4.BEkos.C5.A5_Family'
+         # More info
+         elif res  == hook_texts[lang][title]["buttons"][2]:
+            if lang == "SK":
+               url = 'https://gfi.miraheze.org/wiki/Chyby_vo_families_Revitu#Ve.C4.BEkos.C5.A5_Family'
+            else:
+               url = 'https://customtools.notion.site/Procedures-to-be-avoided-e6e4ce335d544040acee210943afa237'
             script.open_url(url)
             EXEC_PARAMS.event_args.Cancel()
          else:
