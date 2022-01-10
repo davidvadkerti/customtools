@@ -2,19 +2,30 @@
 # get language for hooks
 def lang():
     from pyrevit.userconfig import user_config
+    from customOutput import def_language
     language_list = [
         "EN",
         "SK",
         "DE",
         "FR",
         ]
+    # if there is a value in pyrevit config file
     try:
         lang_index = user_config.CustomToolsSettings.language
+    # if there is no value in pyrevit config file
     except:
         user_config.CustomToolsSettings.language = def_language
         lang_index = def_language
 
-    return language_list[lang_index]
+    # because of change of variable, in the past it was string, now it is index
+    try:
+        language = language_list[lang_index]
+    # if type doesnt match, load default value
+    except TypeError:
+        user_config.CustomToolsSettings.language = def_language
+        lang_index = def_language
+        language = language_list[lang_index]
+    return language
 
 # dictionary of texts in the hooks in various languages
 # do not edit manually, this dictionary is created from an airtable base
