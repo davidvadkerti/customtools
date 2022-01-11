@@ -9,14 +9,14 @@ You can find more info on [CustomTools wiki](https://customtools.notion.site/cus
 ## Installation
 * Close all instances of Revit.
 * **If you do NOT have pyRevit installed yet:**
-  * uninstall it (delete pyRevit folders in %appdata%).
-  * Download and install [pyRevit CLI](https://github.com/eirannejad/pyRevit/releases) (not pyRevit).
-  * Download the latest version of [CustomTools](https://bitbucket.org/davidvadkerti/customtools/downloads/?tab=tags).
-  * At first run the file pyRevit.CLI_x.xx.x.x_signed.exe
-  * Run cumulative installation of pyRevit and CustomTools - file **pyRevit&CustomToolsInstall**.
+   * uninstall it (delete pyRevit folders in %appdata%).
+   * Download and install [pyRevit CLI](https://github.com/eirannejad/pyRevit/releases) (not pyRevit).
+   * Download the latest version of [CustomTools](https://bitbucket.org/davidvadkerti/customtools/downloads/?tab=tags).
+   * At first run the file pyRevit.CLI_x.xx.x.x_signed.exe
+   * Run cumulative installation of pyRevit and CustomTools - file **pyRevit&CustomToolsInstall**.
 * **If you have pyRevit installed:**
-  * Download the latest version of [CustomTools](https://bitbucket.org/davidvadkerti/customtools/downloads/?tab=tags).
-  * Run the installation of CustomTools - file **CustomToolsInstall**.
+   * Download the latest version of [CustomTools](https://bitbucket.org/davidvadkerti/customtools/downloads/?tab=tags).
+   * Run the installation of CustomTools - file **CustomToolsInstall**.
   
 
 * CustomTools checks for updates on system startup. If there is update available it will be automatically installed.
