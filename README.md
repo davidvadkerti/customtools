@@ -8,13 +8,13 @@ Brief description of added features is available as tooltips. You need to hold y
 You can find more info on [CustomTools wiki](https://customtools.notion.site/customtools/CustomTools-wiki-76d8472edc6444e5bb3ce90f7998f1ef).
 ## Installation
 * Close all instances of Revit.
-**If you do NOT have pyRevit installed yet:**
+### If you do NOT have pyRevit installed yet:
 * uninstall it (delete pyRevit folders in %appdata%).
 * Download and install [pyRevit CLI](https://github.com/eirannejad/pyRevit/releases) (not pyRevit).
 * Download the latest version of [CustomTools](https://bitbucket.org/davidvadkerti/customtools/downloads/?tab=tags).
 * At first run the file pyRevit.CLI_x.xx.x.x_signed.exe
 * Run cumulative installation of pyRevit and CustomTools - file **pyRevit&CustomToolsInstall**.
-**If you have pyRevit installed:**
+### If you have pyRevit installed:
 * Download the latest version of [CustomTools](https://bitbucket.org/davidvadkerti/customtools/downloads/?tab=tags).
 * Run the installation of CustomTools - file **CustomToolsInstall**.
   

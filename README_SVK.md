@@ -9,12 +9,12 @@ Popis každého nástroja sa zobrazí pri podržaní kurzora myši nad jeho ikon
 Viac informácií je dostupných na [CustomTools wiki](https://customtools.notion.site/customtools/CustomTools-wiki-76d8472edc6444e5bb3ce90f7998f1ef).
 ## Inštalácia
 * Zatvorte všetky inštancie Revitu.
-**Ak ešte nemáte nainštalovaný pyRevit:**
+### Ak ešte nemáte nainštalovaný pyRevit:
 * Stiahnite a nainštalujte si [pyRevit CLI](https://github.com/eirannejad/pyRevit/releases) (nie pyRevit).
 * Stiahnite si aktuálnu verziu [CustomTools](https://bitbucket.org/davidvadkerti/customtools/downloads/?tab=tags)
 * Najprv spustite inštaláciu pyRevit.CLI_x.xx.x.x_signed.exe
 * Spustite spoločnú inštaláciu pyRevitu a CustomTools - súbor **pyRevit&CustomToolsInstall**.
-**Ak už máte nainštalovaný pyRevit:**
+### Ak už máte nainštalovaný pyRevit:
 * Stiahnite si aktuálnu verziu [CustomTools](https://bitbucket.org/davidvadkerti/customtools/downloads/?tab=tags)
 * Spustite  CustomTools - súbor **CustomToolsInstall**.
 
