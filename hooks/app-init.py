@@ -2,8 +2,6 @@
 from pyrevit.userconfig import user_config
 from hooksScripts import versionLogger, releasedVersion, snapshot
 from customOutput import ct_icon, mass_message_url
-from customOutput import def_hookLogs, def_revitBuildLogs, def_revitBuilds, def_massMessagePath
-from customOutput import def_syncLogPath, def_openingLogPath, def_dashboardsPath, def_language
 
 # CustomTools update at revit startup
 import os
@@ -25,57 +23,6 @@ except:
 
 versionLogger(releasedVersion,snapshot)
 
-# creating sections in pyRevit_config.ini if it does not exist
-try:
-    user_config.add_section('CustomToolsSettings')
-except:
-    pass
-# if parameter does not exist create one in pyRevit_config.ini
-# hookLogs
-try:
-    user_config.CustomToolsSettings.hookLogs
-except AttributeError:
-    user_config.CustomToolsSettings.hookLogs = def_hookLogs
-# revitBuildLogs
-try:
-    user_config.CustomToolsSettings.revitBuildLogs
-except AttributeError:
-    user_config.CustomToolsSettings.revitBuildLogs = def_revitBuildLogs
-# revitBuilds
-try:
-    user_config.CustomToolsSettings.revitBuilds
-except AttributeError:
-    user_config.CustomToolsSettings.revitBuilds = def_revitBuilds
-# massMessagePath
-try:
-    user_config.CustomToolsSettings.massMessagePath
-except AttributeError:
-    user_config.CustomToolsSettings.massMessagePath = def_massMessagePath
-# syncLogPath
-try:
-    user_config.CustomToolsSettings.syncLogPath
-except AttributeError:
-    user_config.CustomToolsSettings.syncLogPath = def_syncLogPath
-# openingLogPath
-try:
-    user_config.CustomToolsSettings.openingLogPath
-except AttributeError:
-    user_config.CustomToolsSettings.openingLogPath = def_openingLogPath
-# dashboardsPath
-try:
-    user_config.CustomToolsSettings.dashboardsPath
-except AttributeError:
-    user_config.CustomToolsSettings.dashboardsPath = def_dashboardsPath
-# language
-try:
-    user_config.CustomToolsSettings.language
-except AttributeError:
-    # user_config.CustomToolsSettings.language = str(def_language)
-    user_config.CustomToolsSettings.language = def_language
-
-user_config.save_changes()
-
-
 """TEASER."""
 #prints heading and links offline version of mass message
 from pyrevit import script, coreutils
@@ -85,6 +32,23 @@ output.set_height(700)
 output.set_title("Mass Message")
 # changing icon
 ct_icon(output)
+
+
+# # server version of massmessage
+# # if parameter exists in config file
+# try:
+#     url = user_config.CustomToolsSettings.massMessagePath
+# # if parameter doesnt exist in config file
+# except:
+#     url = def_massMessagePath
+
+# # url = "L:\\_i\\CTmassMessage\\mass_message.html"
+# url_unc = "\\\\Srv\\Z\\_i\\CTmassMessage\\mass_message.html"
+# if path.exists(url):
+#     # output.open_url(url)
+#     output.open_page(url)
+# elif path.exists(url_unc):
+#     output.open_page(url_unc)
 
 # server version of massmessage
 output.open_page(mass_message_url(output))
