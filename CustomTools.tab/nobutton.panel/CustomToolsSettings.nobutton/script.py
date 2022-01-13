@@ -63,17 +63,6 @@ class ctSettingsWindow(forms.WPFWindow):
             user_config.CustomToolsSettings.language = def_language
 
 
-        user_config.save_changes()
-
-        self.hookLogs_tb.Text = user_config.CustomToolsSettings.hookLogs
-        self.revitBuildLogs_tb.Text = user_config.CustomToolsSettings.revitBuildLogs
-        self.revitBuilds_tb.Text = user_config.CustomToolsSettings.revitBuilds
-        self.massMessagePath_tb.Text = user_config.CustomToolsSettings.massMessagePath 
-        self.syncLogPath_tb.Text = user_config.CustomToolsSettings.syncLogPath
-        self.openingLogPath_tb.Text = user_config.CustomToolsSettings.openingLogPath
-        self.dashboardsPath_tb.Text = user_config.CustomToolsSettings.dashboardsPath
-        self.language_cb.SelectedIndex = user_config.CustomToolsSettings.language
-
     # saves values to config file
     def process_text(self, sender, args):
         self.Close()
@@ -85,6 +74,9 @@ class ctSettingsWindow(forms.WPFWindow):
         user_config.CustomToolsSettings.openingLogPath = str(self.openingLogPath_tb.Text)
         user_config.CustomToolsSettings.dashboardsPath = str(self.dashboardsPath_tb.Text)
         user_config.CustomToolsSettings.language = self.language_cb.SelectedIndex
+        
+        # saving changes to the pyrevit_config file
+        user_config.save_changes()
 
         # print(user_config.CustomToolsSettings.hookLogs)
         # print(user_config.CustomToolsSettings.revitBuildLogs)
