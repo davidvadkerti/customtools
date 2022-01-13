@@ -23,7 +23,6 @@ try:
 except:
     pass
 
-versionLogger(releasedVersion,snapshot)
 
 # creating sections in pyRevit_config.ini if it does not exist
 try:
@@ -75,6 +74,9 @@ except AttributeError:
 
 user_config.save_changes()
 
+# write log with revit build, username, CTversion and timestamp
+# check revit build and show warning window if it's wrong
+versionLogger(releasedVersion,snapshot)
 
 """TEASER."""
 #prints heading and links offline version of mass message
