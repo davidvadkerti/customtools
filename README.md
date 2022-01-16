@@ -9,7 +9,6 @@ You can find more info on [CustomTools wiki](https://customtools.notion.site/cus
 ## Installation
 * Close all instances of Revit.
 #### If you do NOT have pyRevit installed yet:
-* uninstall it (delete pyRevit folders in %appdata%).
 * Download and install [pyRevit CLI](https://github.com/eirannejad/pyRevit/releases) (not pyRevit).
 * Download the latest version of [CustomTools](https://bitbucket.org/davidvadkerti/customtools/downloads/?tab=tags).
 * At first run the file pyRevit.CLI_x.xx.x.x_signed.exe
