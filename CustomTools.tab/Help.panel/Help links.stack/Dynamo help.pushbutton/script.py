@@ -5,5 +5,5 @@ from pyrevit import script
 __context__ = 'zero-doc'
 
 
-url = 'https://gfi.miraheze.org/wiki/Zoznam_Dynamo_skriptov'
+url = 'http://dynamohelp.atwebpages.com'
 script.open_url(url)
