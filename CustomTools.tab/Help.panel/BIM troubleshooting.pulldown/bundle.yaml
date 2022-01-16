@@ -1,9 +1,0 @@
-title: >-
-  BIM
-
-  troubleshooting
-tooltip: Posting and viewing issues, questions, proposals or bugs related to BIM.
-layout:
-  - PostIssue
-  - ViewIssues
-help_url: https://gfi.miraheze.org/wiki/BIM_troubleshooting
