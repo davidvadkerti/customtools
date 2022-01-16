@@ -1,0 +1,10 @@
+tooltip: >-
+  Find Rooms by Name or Number. Search is not case sensitive.
+
+  Search results are sorted according to selected parameter (Name or Number).
+
+  
+  If nothing is written in the search box, all Rooms in the model will be listed in the results.
+title: Find Rooms
+author: 'David Vadkerti'
+highlight: new
