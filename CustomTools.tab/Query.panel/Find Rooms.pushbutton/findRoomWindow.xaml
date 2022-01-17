@@ -29,7 +29,7 @@
     </StackPanel>
 
 
-    <GroupBox Header="Erase:" Grid.Row="1" Grid.ColumnSpan="1" Margin="0,0,0,0">
+    <GroupBox Header="Parameters" Grid.Row="1" Grid.ColumnSpan="1" Margin="0,0,0,0">
         <StackPanel Margin="10">
             <RadioButton x:Name="SearchByName" GroupName="searchoptions" IsChecked="True">Search by Name</RadioButton>
             <RadioButton x:Name="SearchByNumber" GroupName="searchoptions" IsChecked="False">Search by Number</RadioButton>
