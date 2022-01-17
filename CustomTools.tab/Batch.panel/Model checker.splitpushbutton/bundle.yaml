@@ -4,6 +4,7 @@ layout:
   - DWG schedule
   - Critical Warning schedule
   - Warning schedule
+  - Warning count
   - Detail Group Schedule
   - InPlaceFamilySchedule
   - NotPlacedViewsSchedule
