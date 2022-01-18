@@ -8,87 +8,73 @@ Lists most Warnings related to architecural elements in the active model in Sche
 __title__ = 'Critical Warning schedule'
 __doc__ = 'Lists Warnings related to architecural elements in the active model in Schedule with clickable Element Ids, Category of elements and Warning descritpions.'
 
-from Autodesk.Revit.DB import FilteredElementCollector, BuiltInCategory
 from pyrevit import revit, DB, coreutils, script, output, forms
 from pyrevit.coreutils import Timer
 from pyrevit.output import charts
-from customOutput import criticalWarnings, hmsTimer
-from customOutput import file_name_getter, colors, ct_icon
+from customOutput import criticalWarnings, hmsTimer, file_name_getter, colors, ct_icon
 
 # from __future__ import division
 
 uidoc = __revit__.ActiveUIDocument
 doc = __revit__.ActiveUIDocument.Document
+timer = Timer()
 
 allWarnings = doc.GetWarnings()
-# estimated duration in minutes
-estDuration=len(allWarnings)/140
-
-
-timer = Timer()
 
 output = script.get_output()
 # changing icon
 ct_icon(output)
+output.set_width(700)
 output.print_md("# CRITICAL WARNINGS SCHEDULE")
 output.print_md("### " + file_name_getter(doc))
+output.freeze()
 
-# print markdown code schedule header
-md_schedule = "| Warning No. | Element Id |  Element Category | Warning Description |\n| ----------- | ----------- | ----------- | ----------- |"
 count = 0
-
 cacheWarning = ""
 cacheWarningType = ""
 # for graph
 graphHeadings = []
 graphWarnData = []
-# criticalWarnings = ['Elements have duplicate "Type Mark" values','There are identical instances in the same place',
-#     'Room Tag is outside of its Room','Multiple Rooms are in the same enclosed region','One element is completely inside another']
+
 for warning in allWarnings:
     elementsList=warning.GetFailingElements()
     description=warning.GetDescriptionText()
-
     # for warning type heading
+    # Few warnings have mistakenly no dot in the end.
     try:
         descLen = description.index(".")
-    # Few warnings have nistakenly no dot in the end.
     except:
         descLen = len(description)
-    descHeading = description[:descLen]
+    # cutting long descriptions
+    limit = 50
+    if descLen < limit:
+        descHeading = description[:descLen]
+    # very long and repetetive descriptions
+    elif description[:10] == "Mechanical" or description[:8] == "Hydronic":
+        descHeading = description[:20] + "..."
+    else:
+        descHeading = description[:limit] + "..."
+
     # print descHeading
     if descHeading in criticalWarnings:
         count += 1
-        # print description
-        # print elementsList
+
+        print(coreutils.prepare_html_str("<hr>"))
+        output.print_md("### " + str(count))
+        print(description)
+
         for elemID in elementsList:
                 # elem = doc.GetElement(elemID)
                 # catName = elem.Category.Name
                 try:
                     elem = doc.GetElement(elemID)
-                except:
-                    elem = "NA"
-                try:
                     catName = elem.Category.Name
                 except:
                     catName = "NA"
-                idString = str(elemID.IntegerValue)
-                # print(idString + " " +catName)
-                # print(elemID)
-                # print idString
-                newScheduleLine = " \n| "+str(count)+" | "+output.linkify(elemID)+" | "+catName+" | "+description+" |"
-                # new line when new warning number to visualy divide warnings
-                if cacheWarningType == descHeading:
-                    if cacheWarning == count:                    
-                        md_schedule += newScheduleLine
-                    else:
-                        newScheduleLine = " \n| " + newScheduleLine
-                        md_schedule += newScheduleLine
-                else:
-                        newScheduleLine = " \n <td colspan=3>**"+descHeading+".**<td colspan=3>" + newScheduleLine
-                        # newScheduleLine = " \n| **"+description.upper()+"** |" + newScheduleLine
-                        md_schedule += newScheduleLine
-                cacheWarning = count
-                cacheWarningType = descHeading
+
+                newWarning= " \n " + output.linkify(elemID) + " \t " + catName + " \t "
+                print(newWarning)
+
         # for graph headings
         if descHeading not in graphHeadings:
             graphHeadings.append(descHeading)
@@ -100,10 +86,7 @@ for i in graphHeadings:
     count=graphWarnData.count(i)        
     warnSet.append(count)
 
-
-
-# print markdown code
-output.print_md(md_schedule)
+output.unfreeze()
 
 
 # CHART OUTPUT
@@ -118,11 +101,23 @@ set_a = chart.data.new_dataset('Not Standard')
 set_a.data = warnSet
 
 set_a.backgroundColor = colors
-chart.set_height(150)
+
+# flexible chart size
+# count of warning types
+cat_count = len(graphHeadings)
+# count of numbers in the legend
+legend_len = len("".join(graphHeadings))
+legend_metric = cat_count*10 + legend_len
+if legend_metric < 450:
+    chart.set_height(150)
+elif legend_metric < 900:
+    chart.set_height(200)
+elif legend_metric < 1500:
+    chart.set_height(250)
+else:
+    chart.set_height(300)
 
 chart.draw()
-# for timing------
+# # for timing------
 endtime = timer.get_time()
 print(hmsTimer(endtime))
-# import random
-# print([(hmsTimer(n), n) for n in range(1,5000,2) if n%30==random.randint(1, 59)])
