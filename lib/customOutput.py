@@ -129,3 +129,10 @@ def linkMaker(a,title):
 def imageViewer(html_code):
     # sample_code = "<img src='https://i.ytimg.com/vi/SfLV8hD7zX4/maxresdefault.jpg' width=50%>"
     print(coreutils.prepare_html_str(html_code))
+
+# heading in html
+def heading(text, size):
+    # sample_code = "<h2>Heading</h2>"
+    size_str = str(size)
+    html_code = "<h" + size_str +">" + text + "</h" + size_str +">"
+    print(coreutils.prepare_html_str(html_code))
