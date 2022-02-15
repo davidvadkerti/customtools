@@ -80,8 +80,7 @@ versionLogger(releasedVersion,snapshot)
 
 """TEASER."""
 #prints heading and links offline version of mass message
-from pyrevit import script, coreutils
-from os import path
+from pyrevit import script
 output = script.get_output()
 output.set_height(700)
 output.set_title("Mass Message")
