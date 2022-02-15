@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 __context__ = 'OST_TextNotes'
-__doc__ = 'Vloží vybraný symbol na začiatok vybraných Text Notes.'
+__doc__ = 'Inserts a special character at the beginning of selected Text Notes.'
 __title__ = 'Symbols'
 
 from pyrevit import revit, coreutils
