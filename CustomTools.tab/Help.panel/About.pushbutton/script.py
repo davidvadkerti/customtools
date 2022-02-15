@@ -21,7 +21,7 @@ print("CustomTools is extension for pyRevit Add-In")
 print(text_highligter("version " + releasedVersion) + text_highligter("snapshot " + snapshot))
 
 #prints clickable email address
-print("\nFor support contact "+ mailto("vadkerti@gfi.sk"))
+
 print("\n- " + linkMaker("https://customtools.notion.site/customtools/CustomTools-wiki-76d8472edc6444e5bb3ce90f7998f1ef","CustomTools wiki")+" - documentation")
 print("- " + linkMaker("https://www.youtube.com/watch?v=WhEJ_YVtSM8&list=PL7jLBbBNDaKk8iQjLTBasAntRjiu4W2G2","CustomTools Youtube channel")+" - video user manual")
 print("- " + linkMaker("https://bitbucket.org/davidvadkerti/customtools/src/master/","Git repository")+" - Bitbucket repo")
