@@ -1,7 +1,7 @@
 
 # CustomTools
 ###### [EN version](https://bitbucket.org/davidvadkerti/customtools/src/master/README.md)
-![alt text](https://static.miraheze.org/gfiwiki/b/be/CustomToolsRibbon.PNG "Custom Tools Ribbon")
+![alt text](https://static.miraheze.org/gfiwiki/b/be/CustomToolsRibbon.PNG "Custom Tools Tab")
 ## Extension pre pyRevit
 CustomTools je Add-in pre Revit tvorený podľa požiadaviek používateľov Revitu. Nevyhnutným prepodkladom na použitie je inštalácia Add-inu [pyRevit](https://www.notion.so/pyRevit-bd907d6292ed4ce997c46e84b6ef67a0). pyRevit nie je potrebné inštalovať samostatne, jeho inštalácia je zahrnutá v inštalačnom súbore CustomTools. 
 ## Help
