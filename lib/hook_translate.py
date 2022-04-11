@@ -47,11 +47,12 @@ Pri vytváraní nového Shared Parametru si najskôr pozrite, či už podobný p
 "Revit Build":{
 "text":
 "POZOR!\n\n\
-Používaš zlý Revit Build! To môže poškodiť model.\n\
+Používaš starší Revit Build! To môže poškodiť model.\n\
+Čo najskôr si stiahni aktuálny build, zatvor Revit a nainštaluj si ho.\n\
 \n\
 Správne Revit Buildy sú ",
 "buttons":
-["Chcem len otvoriť súbor bez synchronizácie",
+["Pokračovať v práci",
 "Ako môžem tento problém opraviť?"],
 },
 "View, Schedule or Sheet Deletion":{
@@ -201,11 +202,11 @@ When you create a new Shared Paramter, first see if a similar parameter is alrea
 "Revit Build":{
 "text":
 "ATTENTION!\n\n\
-You're using the wrong Revit Build! It can damage the model.\n\
+You're using obsolete Revit Build! This can damage the model.\n\
 \n\
 The correct Revit Builds are ",
 "buttons":
-["I just want to open the file without syncing",
+["Continue to work",
 "How can I fix this problem?"],
 },
 "View, Schedule or Sheet Deletion":{
@@ -272,9 +273,9 @@ Did you follow the workaround on the link below?",
 In Place Families should be used only in exceptional cases,\n\
 hence they have lot of disadvantages:\n\
 - problematic scheduling options\n\
-- no Level asigned\n\
+- no Level assigned\n\
 - each copy is independent family instance\n\
-- limited support for parametric modeling\n\n\
+- limited support for parametric modelling\n\n\
 Do you really want to create In Place Family?",
 "buttons":
 ["Create",
