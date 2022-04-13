@@ -1,0 +1,84 @@
+# -*- coding: UTF-8 -*-
+from pyrevit import revit, DB
+from pyrevit import script
+from pyrevit import forms
+from pyrevit import output
+
+from Autodesk.Revit.DB import FilteredElementCollector
+from Autodesk.Revit.DB import RevisionCloud, Revision, TextNoteType, TextNote, Dimension, DimensionType
+
+from pyrevit.coreutils import Timer
+from customOutput import hmsTimer, ct_icon, file_name_getter
+
+doc = __revit__.ActiveUIDocument.Document
+output = script.get_output()
+output.set_width(1300)
+
+# changing icon
+ct_icon(output)
+
+timer = Timer()
+# heading
+output.print_md("# DIMENSION TYPE SCHEDULE")
+
+textNoteType_collector = FilteredElementCollector(doc).OfClass(DimensionType).ToElements()
+textNote_collector = FilteredElementCollector(doc).OfClass(Dimension).WhereElementIsNotElementType().ToElements()
+
+# count of instances per type
+text_note_types = {}
+for tn in textNote_collector:
+    tn_type_id = tn.GetTypeId().ToString()
+    try:
+        text_note_types[tn_type_id] += 1
+    except:
+        text_note_types[tn_type_id] = 1
+
+# text notes type parameters
+scheduleData = []
+for text_note in textNoteType_collector:
+    text_note_name = text_note.get_Parameter(DB.BuiltInParameter.ALL_MODEL_TYPE_NAME).AsString()
+    font = text_note.get_Parameter(DB.BuiltInParameter.TEXT_FONT).AsString()
+    size = text_note.get_Parameter(DB.BuiltInParameter.TEXT_SIZE).AsDouble() * 304.8
+    bold = text_note.get_Parameter(DB.BuiltInParameter.TEXT_STYLE_BOLD).AsInteger()
+    background = text_note.get_Parameter(DB.BuiltInParameter.DIM_TEXT_BACKGROUND).AsInteger()
+    show_opening_ht = text_note.get_Parameter(DB.BuiltInParameter.DIM_STYLE_SHOW_OPENING_HT).AsInteger()
+    width_factor = text_note.get_Parameter(DB.BuiltInParameter.TEXT_WIDTH_SCALE).AsDouble()
+    style_type = text_note.StyleType
+    wtns_ln_ctrl = text_note.get_Parameter(DB.BuiltInParameter.DIM_WITNS_LINE_CNTRL).AsInteger()
+    if wtns_ln_ctrl == 0:
+        wtns_ln_ctrl_v = "Gap to Element"
+    if wtns_ln_ctrl == 1:
+        wtns_ln_ctrl_v = "Fixed"
+
+    witns_ln_gap = text_note.get_Parameter(DB.BuiltInParameter.WITNS_LINE_GAP_TO_ELT).AsDouble() * 304.8
+    witns_ln_ext = text_note.get_Parameter(DB.BuiltInParameter.WITNS_LINE_EXTENSION).AsDouble() * 304.8
+
+
+    text_note_id = text_note.Id
+    text_note_type_creator = DB.WorksharingUtils.GetWorksharingTooltipInfo(revit.doc, text_note_id).Creator 
+    try:
+        count = text_note_types[text_note_id.ToString()]
+    except:
+        count = 0
+
+    # list only items with names not settings items
+    if text_note_name:
+        paramList = [text_note_name, font, size, bold, background, show_opening_ht, width_factor, wtns_ln_ctrl_v, witns_ln_gap, witns_ln_ext, style_type, output.linkify(text_note_id), count, text_note_type_creator]
+
+        scheduleData.append(paramList)
+
+# sort by parameters
+sortedScheduleData = sorted(scheduleData, key=lambda x: int(x[12]))
+
+# printing the schedule if there are data
+if sortedScheduleData:
+    output.print_table(table_data=sortedScheduleData,
+                       title = file_name_getter(doc),
+                       columns=["Text Note Type", "Font", "Size", "Bold", "Background", "Text Box Visibility" ,"Width Factor" ,"Witness line extension", "Witness Line Gap", "Witness line extension", "Style Type","Text Note Type ID", "Count", "Creator"],
+                       formats=['', '', '', '', '', '', '', '', '', '', '', '', ''])
+# if there are no data print status claim
+else:
+    print("There are no Dimension Types in the Project")
+  # for timing------
+endtime = timer.get_time()
+print(hmsTimer(endtime))

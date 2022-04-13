@@ -1,0 +1,12 @@
+title: Dimension Type schedule
+author: David Vadkerti
+tooltip: >-
+  Lists all Dimension Types with count of instances and basic parameter values.  
+
+  
+  After clicking on ID you can Select all instances in the project.
+
+
+  You can use pyRevit's List Selection as Clickable Links tool to find specific Dimension instances
+
+highlight: new
