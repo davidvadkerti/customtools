@@ -5,7 +5,7 @@ from customOutput import def_massMessagePath, def_syncLogPath, def_openingLogPat
 
 # version of CustomTools
 releasedVersion = "0.9.2"
-snapshot = "220413"
+snapshot = "220415"
 
 # logging to server
 def hooksLogger(log_string, doc):
@@ -58,11 +58,15 @@ def hooksLogger(log_string, doc):
 def versionLogger(releasedVersion,snapshot):
   from datetime import datetime
   import getpass
+  import os
   from pyrevit import revit, _HostApplication
   from pyrevit import forms, script
   from stringFormating import listFromString
 
+  domain = os.environ['userdomain']
   user_name = getpass.getuser()
+  # user name with domain name to better distinguish users
+  domain_user = "\\".join((domain,user_name))
   datestamp = str(datetime.now())
 
   # from pyrevit import EXEC_PARAMS
@@ -126,7 +130,7 @@ def versionLogger(releasedVersion,snapshot):
       f = open(revitBuildLogs, "a")
     except:
       f = open("\\\\Srv\\Z\\customToolslogs\\versions.log", "a")  
-    f.write(datestamp + separator + releasedVersion + "_" + snapshot + separator + user_name + separator + build + "\n")
+    f.write(datestamp + separator + releasedVersion + "_" + snapshot + separator + domain_user + separator + build + "\n")
     f.close()
   except:
          pass
