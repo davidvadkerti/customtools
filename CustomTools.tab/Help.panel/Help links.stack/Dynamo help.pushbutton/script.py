@@ -1,4 +1,4 @@
-"""Opens the GFI wiki dynamo help article."""
+"""Opens the dynamo help web page."""
 from pyrevit import script
 
 
