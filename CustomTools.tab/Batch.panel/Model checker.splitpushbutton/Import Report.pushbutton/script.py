@@ -20,7 +20,7 @@ def copyFile(fileName,pathTo,folderPath):
         copyfile(copyFromPath, folderPath+fileName)
     # path for developer using git clone
     except:
-        copyFromPath = homepath + "\Documents\gitRepos\pyRevit extensions\CustomTools.extension" + pathTo
+        copyFromPath = homepath + "\OneDrive\Dokumenty\gitrepos\pyRevit Extension\CustomTools.extension" + pathTo
         copyfile(copyFromPath, folderPath+fileName)
 
 # pick source html file to edit
