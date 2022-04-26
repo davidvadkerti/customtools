@@ -18,10 +18,12 @@ output.set_width(1300)
 ct_icon(output)
 
 
-def showDimensionSchedule(sortByParam):
+def showDimensionSchedule():
     timer = Timer()
     # heading
     output.print_md("# DIMENSION TYPE SCHEDULE")
+    # file name
+    output.print_md("### " + file_name_getter(doc))
 
     dimensionType_collector = FilteredElementCollector(doc).OfClass(DimensionType).ToElements()
     dimension_collector = FilteredElementCollector(doc).OfClass(Dimension).WhereElementIsNotElementType().ToElements()
@@ -37,6 +39,9 @@ def showDimensionSchedule(sortByParam):
 
     # text notes type parameters
     scheduleData = []
+    # style types - using set to get unique items
+    style_types = set()
+
     for dimension in dimensionType_collector:
         dimension_name = dimension.get_Parameter(DB.BuiltInParameter.ALL_MODEL_TYPE_NAME).AsString()
         font = dimension.get_Parameter(DB.BuiltInParameter.TEXT_FONT).AsString()
@@ -68,40 +73,30 @@ def showDimensionSchedule(sortByParam):
             paramList = [dimension_name, font, size, bold, background, show_opening_ht, width_factor, wtns_ln_ctrl_v, witns_ln_gap, witns_ln_ext, style_type, output.linkify(dimension_id), count, dimension_type_creator]
 
             scheduleData.append(paramList)
+        # add stype type to list of unique style types (sets)
+        style_types.add(style_type)
 
-    # sort by parameters
-    if sortByParam == "By Style Type":
-        sortedScheduleData = sorted(scheduleData, key=lambda x: int(x[10]))
-    elif sortByParam == "By Creator":
-        sortedScheduleData = sorted(scheduleData, key=lambda x: x[13].lower())
-    elif sortByParam == "By Dimension Type Name":
-        sortedScheduleData = sorted(scheduleData, key=lambda x: x[0].lower())
-    else:
-        sortedScheduleData = sorted(scheduleData, key=lambda x: int(x[12]))
+    # one schedule per each dimension style type
+    for style_type in style_types:
+        filtered_schedule_data = []
+        for line in scheduleData:
+            if line[10] == style_type:
+                filtered_schedule_data.append(line)
 
-    # printing the schedule if there are data
-    if sortedScheduleData:
-        output.print_table(table_data=sortedScheduleData,
-                           title = file_name_getter(doc),
-                           columns=["Dimension Type", "Font", "Size", "Bold", "Background", "Text Box Visibility" ,"Width Factor" ,"Witness line extension", "Witness Line Gap", "Witness line extension", "Style Type","Text Note Type ID", "Count", "Creator"],
-                           formats=['', '', '', '', '', '', '', '', '', '', '', '', ''])
-    # if there are no data print status claim
-    else:
-        print("There are no Dimension Types in the Project")
-      # for timing------
+        # sort by count of instances
+        sortedScheduleData = sorted(filtered_schedule_data, key=lambda x: int(x[12]))
+        # printing the schedule if there are data
+        if sortedScheduleData:
+            output.print_table(table_data=sortedScheduleData,
+                               title = str(style_type) + " Dimension Styles",
+                               columns=["Dimension Type", "Font", "Size", "Bold", "Background", "Text Box Visibility" ,"Width Factor" ,"Witness line extension", "Witness Line Gap", "Witness line extension", "Style Type","Text Note Type ID", "Count", "Creator"],
+                               formats=['', '', '', '', '', '', '', '', '', '', '', '', ''])
+        # if there are no data print status claim
+        else:
+            print("There are no Dimension Types in the Project")
+
+    # for timing------
     endtime = timer.get_time()
     print(hmsTimer(endtime))
 
-my_config = script.get_config()
-
-selected_option = \
-    forms.CommandSwitchWindow.show(
-        ['By Style Type',
-         'By Dimension Type Name',
-         'By Count of Instances',
-         'By Creator'],
-        message='Sort by:'
-        )
-
-if selected_option:
-    showDimensionSchedule(selected_option)
+showDimensionSchedule()
