@@ -34,16 +34,18 @@ def win_swing_setter(doc):
         for w in windows:
             w_type_Id = w.GetTypeId()
             w_type = Document.GetElement(doc,w_type_Id)
-            # skipping the wall penetration modelled in the window category
-            filterp = w_type.get_Parameter(BuiltInParameter.ALL_MODEL_TYPE_COMMENTS)
-            if filterp and filterp.AsString() != "stavebne upravy":
-                param = w.LookupParameter(param_name)
-                if param:
-                    # default window is Right
-                    if w.Mirrored:
-                        param.Set(left)
-                    else:
-                        param.Set(right)
+            # skipping all windows without Type (e.g. DirectShape)
+            if w_type:
+                # skipping the wall penetration modelled in the window category
+                filterp = w_type.get_Parameter(BuiltInParameter.ALL_MODEL_TYPE_COMMENTS)
+                if filterp and filterp.AsString() != "stavebne upravy":
+                    param = w.LookupParameter(param_name)
+                    if param:
+                        # default window is Right
+                        if w.Mirrored:
+                            param.Set(left)
+                        else:
+                            param.Set(right)
 
 
 if not doc.IsFamilyDocument:
