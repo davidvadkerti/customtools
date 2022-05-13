@@ -53,7 +53,7 @@ def revision_schedule(selected_revisions):
       # printing the schedule if there are data
       if scheduleData:
       	# sort by mark
-      	sortedScheduleData = sorted(scheduleData, key=lambda x: x[2].lower())
+      	sortedScheduleData = sorted(scheduleData, key=lambda x: str(x[2]).lower())
         output.print_table(table_data=sortedScheduleData,
                            title = "Revision Cloud Schedule for Revision '" + selected_revision_name + "'",
                            columns=["Count", "Mark", "Comments", "Element Id", "Revision Name","Author"],
