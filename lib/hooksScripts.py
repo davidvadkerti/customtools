@@ -5,7 +5,7 @@ from customOutput import def_massMessagePath, def_syncLogPath, def_openingLogPat
 
 # version of CustomTools
 releasedVersion = "0.9.2"
-snapshot = "220513"
+snapshot = "220525"
 
 # logging to server
 def hooksLogger(log_string, doc):
@@ -104,8 +104,8 @@ def versionLogger(releasedVersion,snapshot):
   try:
     company_build = listFromString(user_config.CustomToolsSettings.revitBuilds)
     # just temporary for changing company build
-    if "20211103_1515(x64)" in company_build:
-      user_config.CustomToolsSettings.revitBuilds = "20210420_1515(x64), 20210804_1515(x64), 20220123_1515(x64)"
+    if "20210420_1515(x64)" in company_build:
+      user_config.CustomToolsSettings.revitBuilds = "20210420_1515(x64), 20210804_1515(x64), 20220123_1515(x64), 20220429_1500(x64)"
       company_build = listFromString(user_config.CustomToolsSettings.revitBuilds)
 
   # if parameter doesnt exist in config file
