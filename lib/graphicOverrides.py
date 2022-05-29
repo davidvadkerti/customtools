@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*- 
 
-# overrides projection lines in view
-def setProjLines(r,g,b):
+# overrides lines and patterns in view
+def setProjLines(r,g,b, strong = False):
     from pyrevit import revit, DB, forms
     try:
     	selection = revit.get_selection()
@@ -15,6 +15,15 @@ def setProjLines(r,g,b):
                 src_style.SetCutLineColor(color)
                 src_style.SetCutForegroundPatternColor(color)
                 src_style.SetCutBackgroundPatternColor(color)
+
+                if strong:
+                    src_style.SetSurfaceBackgroundPatternColor(color)
+                    src_style.SetCutBackgroundPatternColor(color)
+
+                    # 4 is ElementId of Solid Fill Pattern
+                    src_style.SetSurfaceBackgroundPatternId(DB.ElementId(4))
+                    src_style.SetCutBackgroundPatternId(DB.ElementId(4))
+
                 for element in selection:
                     revit.active_view.SetElementOverrides(element.Id, src_style)
         else:

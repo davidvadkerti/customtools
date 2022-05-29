@@ -149,30 +149,109 @@
   <ShortcutItem CommandName="Transmit a model" CommandId="CustomCtrl_%CustomCtrl_%Add-Ins%eTransmit%eTransmit" Paths="Add-Ins&gt;eTransmit" />
   <ShortcutItem CommandName="Help" CommandId="CustomCtrl_%CustomCtrl_%Add-Ins%eTransmit%eTransmitHelp" Paths="Add-Ins&gt;eTransmit" />
   <ShortcutItem CommandName="About" CommandId="CustomCtrl_%CustomCtrl_%Add-Ins%eTransmit%eTransmitAbout" Paths="Add-Ins&gt;eTransmit" />
+  <ShortcutItem CommandName="ColorSplasher" CommandId="CustomCtrl_%CustomCtrl_%Add-Ins%BIM One%Color Splasher" Paths="Add-Ins&gt;BIM One" />
   <ShortcutItem CommandName="Convert RFAto FormIt" CommandId="CustomCtrl_%CustomCtrl_%Add-Ins%FormIt Converter%Convert RFA to FormIt" Paths="Add-Ins&gt;FormIt Converter" />
-  <ShortcutItem CommandName="Revit Lookup:Hello World..." CommandId="CustomCtrl_%CustomCtrl_%CustomCtrl_%Add-Ins%Revit Lookup%Options%HelloWorld" Paths="Add-Ins&gt;Revit Lookup" />
-  <ShortcutItem CommandName="Revit Lookup:Snoop DB..." CommandId="CustomCtrl_%CustomCtrl_%CustomCtrl_%Add-Ins%Revit Lookup%Options%Snoop Db.." Paths="Add-Ins&gt;Revit Lookup" />
-  <ShortcutItem CommandName="Revit Lookup:Snoop Current Selection..." CommandId="CustomCtrl_%CustomCtrl_%CustomCtrl_%Add-Ins%Revit Lookup%Options%Snoop Current Selection..." Paths="Add-Ins&gt;Revit Lookup" />
-  <ShortcutItem CommandName="Revit Lookup:Snoop Pick Face..." CommandId="CustomCtrl_%CustomCtrl_%CustomCtrl_%Add-Ins%Revit Lookup%Options%Snoop Pick Face..." Paths="Add-Ins&gt;Revit Lookup" />
-  <ShortcutItem CommandName="Revit Lookup:Snoop Pick Edge..." CommandId="CustomCtrl_%CustomCtrl_%CustomCtrl_%Add-Ins%Revit Lookup%Options%Snoop Pick Edge..." Paths="Add-Ins&gt;Revit Lookup" />
-  <ShortcutItem CommandName="Revit Lookup:Snoop Linked Element..." CommandId="CustomCtrl_%CustomCtrl_%CustomCtrl_%Add-Ins%Revit Lookup%Options%Snoop Pick Linked Element..." Paths="Add-Ins&gt;Revit Lookup" />
-  <ShortcutItem CommandName="Revit Lookup:Snoop Dependent Elements..." CommandId="CustomCtrl_%CustomCtrl_%CustomCtrl_%Add-Ins%Revit Lookup%Options%Snoop Dependent Elements..." Paths="Add-Ins&gt;Revit Lookup" />
-  <ShortcutItem CommandName="Revit Lookup:Snoop Active View..." CommandId="CustomCtrl_%CustomCtrl_%CustomCtrl_%Add-Ins%Revit Lookup%Options%Snoop Active View..." Paths="Add-Ins&gt;Revit Lookup" />
-  <ShortcutItem CommandName="Revit Lookup:Snoop Application..." CommandId="CustomCtrl_%CustomCtrl_%CustomCtrl_%Add-Ins%Revit Lookup%Options%Snoop Application..." Paths="Add-Ins&gt;Revit Lookup" />
-  <ShortcutItem CommandName="Revit Lookup:Search and Snoop..." CommandId="CustomCtrl_%CustomCtrl_%CustomCtrl_%Add-Ins%Revit Lookup%Options%Search and Snoop..." Paths="Add-Ins&gt;Revit Lookup" />
-  <ShortcutItem CommandName="RevitPythonShell:InteractivePython Shell" CommandId="CustomCtrl_%CustomCtrl_%CustomCtrl_%Add-Ins%RevitPythonShell%splitButtonRevitPythonShell%RevitPythonShell" Paths="Add-Ins&gt;RevitPythonShell" />
-  <ShortcutItem CommandName="RevitPythonShell:Non-modalShell" CommandId="CustomCtrl_%CustomCtrl_%CustomCtrl_%Add-Ins%RevitPythonShell%splitButtonRevitPythonShell%NonModalRevitPythonShell" Paths="Add-Ins&gt;RevitPythonShell" />
-  <ShortcutItem CommandName="RevitPythonShell:Configure..." CommandId="CustomCtrl_%CustomCtrl_%CustomCtrl_%Add-Ins%RevitPythonShell%splitButtonRevitPythonShell%Configure" Paths="Add-Ins&gt;RevitPythonShell" />
-  <ShortcutItem CommandName="RevitPythonShell:Deploy RpsAddin" CommandId="CustomCtrl_%CustomCtrl_%CustomCtrl_%Add-Ins%RevitPythonShell%splitButtonRevitPythonShell%DeployRpsAddin" Paths="Add-Ins&gt;RevitPythonShell" />
-  <ShortcutItem CommandName="Revit Connector" CommandId="CustomCtrl_%CustomCtrl_%Add-Ins%Speckle 2%Speckle 2" Paths="Add-Ins&gt;Speckle 2" />
-  <ShortcutItem CommandName="Revit ConnectorNew UI (alpha)!" CommandId="CustomCtrl_%CustomCtrl_%Add-Ins%Speckle 2%Speckle 2 New Ui" Paths="Add-Ins&gt;Speckle 2" />
-  <ShortcutItem CommandName="Help &amp; Resources:Community Forum" CommandId="CustomCtrl_%CustomCtrl_%CustomCtrl_%Add-Ins%Speckle 2%Help&amp;Resources%forum" Paths="Add-Ins&gt;Speckle 2" />
-  <ShortcutItem CommandName="Help &amp; Resources:Tutorials" CommandId="CustomCtrl_%CustomCtrl_%CustomCtrl_%Add-Ins%Speckle 2%Help&amp;Resources%tutorials" Paths="Add-Ins&gt;Speckle 2" />
-  <ShortcutItem CommandName="Help &amp; Resources:Docs" CommandId="CustomCtrl_%CustomCtrl_%CustomCtrl_%Add-Ins%Speckle 2%Help&amp;Resources%docs" Paths="Add-Ins&gt;Speckle 2" />
-  <ShortcutItem CommandName="Help &amp; Resources:Manager" CommandId="CustomCtrl_%CustomCtrl_%CustomCtrl_%Add-Ins%Speckle 2%Help&amp;Resources%manager" Paths="Add-Ins&gt;Speckle 2" />
+  <ShortcutItem CommandName="Setting" CommandId="CustomCtrl_%CustomCtrl_%Alpha BIM%Alpha BIM%AlphaBIMSettingCmd" Paths="Alpha BIM&gt;Alpha BIM" />
+  <ShortcutItem CommandName="Donate me" CommandId="CustomCtrl_%CustomCtrl_%Alpha BIM%Alpha BIM%DonateCmd" Paths="Alpha BIM&gt;Alpha BIM" />
+  <ShortcutItem CommandName="About me" CommandId="CustomCtrl_%CustomCtrl_%Alpha BIM%Alpha BIM%AboutCmd" Paths="Alpha BIM&gt;Alpha BIM" />
+  <ShortcutItem CommandName="Join Elements" CommandId="CustomCtrl_%CustomCtrl_%Alpha BIM%Structural Add-ins%JoinElementsCmd" Paths="Alpha BIM&gt;Structural Add-ins" />
   <ShortcutItem CommandName="Log Out" CommandId="CustomCtrl_%CustomCtrl_%Dalux%BIM%Log out" Paths="Dalux&gt;BIM" />
   <ShortcutItem CommandName="Upload" CommandId="CustomCtrl_%CustomCtrl_%Dalux%BIM%Upload" Paths="Dalux&gt;BIM" />
   <ShortcutItem CommandName="Comments" CommandId="CustomCtrl_%CustomCtrl_%Dalux%BIM%Comments" Paths="Dalux&gt;BIM" />
+  <ShortcutItem CommandName="ParaManager" CommandId="CustomCtrl_%CustomCtrl_%DiRoots%Manage%ParaManager" Paths="DiRoots&gt;Manage" />
+  <ShortcutItem CommandName="Create Schedule from CSV" CommandId="CustomCtrl_%CustomCtrl_%WIPscripts%NEW%Create Schedule from CSV" Paths="WIPscripts&gt;NEW" />
+  <ShortcutItem CommandName="Dynamo BIM GUI ●" CommandId="CustomCtrl_%CustomCtrl_%WIPscripts%NEW%DynamoGUI" Paths="WIPscripts&gt;NEW" />
+  <ShortcutItem CommandName="Import CAD" CommandId="CustomCtrl_%CustomCtrl_%WIPscripts%NEW%Import CAD" Paths="WIPscripts&gt;NEW" />
+  <ShortcutItem CommandName="Reload CAD" CommandId="CustomCtrl_%CustomCtrl_%WIPscripts%NEW%Reload CAD" Paths="WIPscripts&gt;NEW" />
+  <ShortcutItem CommandName="Sort and enumerate" CommandId="CustomCtrl_%CustomCtrl_%WIPscripts%NEW%SortAndEnumerate" Paths="WIPscripts&gt;NEW" />
+  <ShortcutItem CommandName="Text" CommandId="CustomCtrl_%CustomCtrl_%WIPscripts%NEW%Text" Paths="WIPscripts&gt;NEW" />
+  <ShortcutItem CommandName="uniqueTypes" CommandId="CustomCtrl_%CustomCtrl_%WIPscripts%NEW%uniqueTypes" Paths="WIPscripts&gt;NEW" />
+  <ShortcutItem CommandName="sharedParameterAdder" CommandId="CustomCtrl_%CustomCtrl_%WIPscripts%NEW%sharedParameterAdder" Paths="WIPscripts&gt;NEW" />
+  <ShortcutItem CommandName="Not Placed Schedules" CommandId="CustomCtrl_%CustomCtrl_%WIPscripts%NEW%NotPlacedSchedules" Paths="WIPscripts&gt;NEW" />
+  <ShortcutItem CommandName="No Parameter" CommandId="CustomCtrl_%CustomCtrl_%WIPscripts%NEW%NoParameter" Paths="WIPscripts&gt;NEW" />
+  <ShortcutItem CommandName="skladby" CommandId="CustomCtrl_%CustomCtrl_%WIPscripts%NEW%skladby" Paths="WIPscripts&gt;NEW" />
+  <ShortcutItem CommandName="Reset Overrides" CommandId="CustomCtrl_%CustomCtrl_%WIPscripts%NEW%ResetOverrides" Paths="WIPscripts&gt;NEW" />
+  <ShortcutItem CommandName="Reset Overrides KLG" CommandId="CustomCtrl_%CustomCtrl_%WIPscripts%NEW%ResetOverridesKLG" Paths="WIPscripts&gt;NEW" />
+  <ShortcutItem CommandName="wsopener" CommandId="CustomCtrl_%CustomCtrl_%WIPscripts%NEW%wsopener" Paths="WIPscripts&gt;NEW" />
+  <ShortcutItem CommandName="Views Sheets and Schedules Eraser:Views, Sheets &amp;Schedule Eraser" CommandId="CustomCtrl_%CustomCtrl_%CustomCtrl_%CustomTools%Batch%Views Sheets and Schedules Eraser%Views Sheets and Schedules Eraser" Paths="CustomTools&gt;Batch" />
+  <ShortcutItem CommandName="Views Sheets and Schedules Eraser:ParameterValue Eraser" CommandId="CustomCtrl_%CustomCtrl_%CustomCtrl_%CustomTools%Batch%Views Sheets and Schedules Eraser%Parameter Eraser" Paths="CustomTools&gt;Batch" />
+  <ShortcutItem CommandName="Views Sheets and Schedules Eraser:All Materials &amp; Lines Eraser" CommandId="CustomCtrl_%CustomCtrl_%CustomCtrl_%CustomTools%Batch%Views Sheets and Schedules Eraser%All Line and Materials Eraser" Paths="CustomTools&gt;Batch" />
+  <ShortcutItem CommandName="Model checker:ModelChecker" CommandId="CustomCtrl_%CustomCtrl_%CustomCtrl_%CustomTools%Batch%Model checker%ModelChecker" Shortcuts="MC" Paths="CustomTools&gt;Batch" />
+  <ShortcutItem CommandName="Model checker:Material &amp; Line purge" CommandId="CustomCtrl_%CustomCtrl_%CustomCtrl_%CustomTools%Batch%Model checker%Line and materials purge" Shortcuts="LP" Paths="CustomTools&gt;Batch" />
+  <ShortcutItem CommandName="Model checker:DWG schedule" CommandId="CustomCtrl_%CustomCtrl_%CustomCtrl_%CustomTools%Batch%Model checker%DWG schedule" Paths="CustomTools&gt;Batch" />
+  <ShortcutItem CommandName="Model checker:Critical Warning schedule" CommandId="CustomCtrl_%CustomCtrl_%CustomCtrl_%CustomTools%Batch%Model checker%Critical Warning schedule" Paths="CustomTools&gt;Batch" />
+  <ShortcutItem CommandName="Model checker:All Warningsschedule" CommandId="CustomCtrl_%CustomCtrl_%CustomCtrl_%CustomTools%Batch%Model checker%Warning schedule" Paths="CustomTools&gt;Batch" />
+  <ShortcutItem CommandName="Model checker:All Warningscount" CommandId="CustomCtrl_%CustomCtrl_%CustomCtrl_%CustomTools%Batch%Model checker%Warning count" Paths="CustomTools&gt;Batch" />
+  <ShortcutItem CommandName="Model checker:Detail Group schedule" CommandId="CustomCtrl_%CustomCtrl_%CustomCtrl_%CustomTools%Batch%Model checker%Detail Group Schedule" Paths="CustomTools&gt;Batch" />
+  <ShortcutItem CommandName="Model checker:In Place Family schedule" CommandId="CustomCtrl_%CustomCtrl_%CustomCtrl_%CustomTools%Batch%Model checker%InPlaceFamilySchedule" Paths="CustomTools&gt;Batch" />
+  <ShortcutItem CommandName="Model checker:Not Placed Views schedule" CommandId="CustomCtrl_%CustomCtrl_%CustomCtrl_%CustomTools%Batch%Model checker%NotPlacedViewsSchedule" Paths="CustomTools&gt;Batch" />
+  <ShortcutItem CommandName="Model checker:2D Elements per View" CommandId="CustomCtrl_%CustomCtrl_%CustomCtrl_%CustomTools%Batch%Model checker%2DelementsPerView" Paths="CustomTools&gt;Batch" />
+  <ShortcutItem CommandName="Model checker:Line Style Usage" CommandId="CustomCtrl_%CustomCtrl_%CustomCtrl_%CustomTools%Batch%Model checker%LineStyleUsage" Paths="CustomTools&gt;Batch" />
+  <ShortcutItem CommandName="Model checker:Text Note Types schedule" CommandId="CustomCtrl_%CustomCtrl_%CustomCtrl_%CustomTools%Batch%Model checker%TextNoteTypesShedule" Paths="CustomTools&gt;Batch" />
+  <ShortcutItem CommandName="Model checker:Dimension Type schedule" CommandId="CustomCtrl_%CustomCtrl_%CustomCtrl_%CustomTools%Batch%Model checker%DimensionTypeSchedule" Paths="CustomTools&gt;Batch" />
+  <ShortcutItem CommandName="Model checker:AllCaps finder" CommandId="CustomCtrl_%CustomCtrl_%CustomCtrl_%CustomTools%Batch%Model checker%AllCapsFinder" Paths="CustomTools&gt;Batch" />
+  <ShortcutItem CommandName="Model checker:View Filter Schedule" CommandId="CustomCtrl_%CustomCtrl_%CustomCtrl_%CustomTools%Batch%Model checker%ViewFilterSchedule" Paths="CustomTools&gt;Batch" />
+  <ShortcutItem CommandName="Model checker:Noname Reference Plane schedule" CommandId="CustomCtrl_%CustomCtrl_%CustomCtrl_%CustomTools%Batch%Model checker%NoNameReferencePlaneSchedule" Paths="CustomTools&gt;Batch" />
+  <ShortcutItem CommandName="Model checker:OwnerSheet" CommandId="CustomCtrl_%CustomCtrl_%CustomCtrl_%CustomTools%Batch%Model checker%OwnerSheet" Shortcuts="OS" Paths="CustomTools&gt;Batch" />
+  <ShortcutItem CommandName="Model checker:Shared Parameter Schedule ●" CommandId="CustomCtrl_%CustomCtrl_%CustomCtrl_%CustomTools%Batch%Model checker%SharedParametersSchedule" Paths="CustomTools&gt;Batch" />
+  <ShortcutItem CommandName="Model checker:Revision Cloud Schedule schedule" CommandId="CustomCtrl_%CustomCtrl_%CustomCtrl_%CustomTools%Batch%Model checker%RevisionCloudSchedule" Paths="CustomTools&gt;Batch" />
+  <ShortcutItem CommandName="Model checker:Import Report ●" CommandId="CustomCtrl_%CustomCtrl_%CustomCtrl_%CustomTools%Batch%Model checker%Import Report" Paths="CustomTools&gt;Batch" />
+  <ShortcutItem CommandName="Batch:Výška a označenieprierazov" CommandId="CustomCtrl_%CustomCtrl_%CustomCtrl_%CustomTools%Batch%Batch%Vyska prierazov" Paths="CustomTools&gt;Batch" />
+  <ShortcutItem CommandName="Batch:Create ShortRoom Numbers" CommandId="CustomCtrl_%CustomCtrl_%CustomCtrl_%CustomTools%Batch%Batch%Create Short Room Numbers" Paths="CustomTools&gt;Batch" />
+  <ShortcutItem CommandName="Batch:CenterRoom Tags" CommandId="CustomCtrl_%CustomCtrl_%CustomCtrl_%CustomTools%Batch%Batch%CenterRoomTags" Shortcuts="CE" Paths="CustomTools&gt;Batch" />
+  <ShortcutItem CommandName="Batch:CenterArea Tags" CommandId="CustomCtrl_%CustomCtrl_%CustomCtrl_%CustomTools%Batch%Batch%CenterAreaTags" Paths="CustomTools&gt;Batch" />
+  <ShortcutItem CommandName="PickCategory:PickCategory" CommandId="CustomCtrl_%CustomCtrl_%CustomCtrl_%CustomTools%Tools%PickCategory%PickCategory" Shortcuts="Shift+C" Paths="CustomTools&gt;Tools" />
+  <ShortcutItem CommandName="PickCategory:ID Of ElementIn Linked File" CommandId="CustomCtrl_%CustomCtrl_%CustomCtrl_%CustomTools%Tools%PickCategory%LinkedElementID" Paths="CustomTools&gt;Tools" />
+  <ShortcutItem CommandName="PickCategory:UID getter" CommandId="CustomCtrl_%CustomCtrl_%CustomCtrl_%CustomTools%Tools%PickCategory%UIDgetter" Paths="CustomTools&gt;Tools" />
+  <ShortcutItem CommandName="PickCategory:UID select" CommandId="CustomCtrl_%CustomCtrl_%CustomCtrl_%CustomTools%Tools%PickCategory%UIDselect" Paths="CustomTools&gt;Tools" />
+  <ShortcutItem CommandName="SlopeCalc" CommandId="CustomCtrl_%CustomCtrl_%CustomTools%Tools%Spady" Paths="CustomTools&gt;Tools" />
+  <ShortcutItem CommandName="TopoPoints" CommandId="CustomCtrl_%CustomCtrl_%CustomTools%Tools%TopoPoints" Paths="CustomTools&gt;Tools" />
+  <ShortcutItem CommandName="Place View On Sheet" CommandId="CustomCtrl_%CustomCtrl_%CustomTools%Tools%Place View on Sheet" Shortcuts="PV" Paths="CustomTools&gt;Tools" />
+  <ShortcutItem CommandName="DeleteActiveView" CommandId="CustomCtrl_%CustomCtrl_%CustomTools%Tools%DeleteActiveView" Paths="CustomTools&gt;Tools" />
+  <ShortcutItem CommandName="ExportSchedule" CommandId="CustomCtrl_%CustomCtrl_%CustomTools%Tools%ExportSchedule" Paths="CustomTools&gt;Tools" />
+  <ShortcutItem CommandName="Same place" CommandId="CustomCtrl_%CustomCtrl_%CustomTools%Tools%Same place" Paths="CustomTools&gt;Tools" />
+  <ShortcutItem CommandName="Wall Disallow Join" CommandId="CustomCtrl_%CustomCtrl_%CustomTools%Tools%WallDisallowJoin" Paths="CustomTools&gt;Tools" />
+  <ShortcutItem CommandName="Open Selected Views" CommandId="CustomCtrl_%CustomCtrl_%CustomTools%Tools%Open Selected Views" Paths="CustomTools&gt;Tools" />
+  <ShortcutItem CommandName="SumParameters" CommandId="CustomCtrl_%CustomCtrl_%CustomTools%Tools%Sum" Paths="CustomTools&gt;Tools" />
+  <ShortcutItem CommandName="OpenedViews" CommandId="CustomCtrl_%CustomCtrl_%CustomTools%Tools%OpenedViews" Paths="CustomTools&gt;Tools" />
+  <ShortcutItem CommandName="." CommandId="CustomCtrl_%CustomCtrl_%CustomTools%Line Color%Red" Shortcuts="Shift+R" Paths="CustomTools&gt;Line Color" />
+  <ShortcutItem CommandName="." CommandId="CustomCtrl_%CustomCtrl_%CustomTools%Line Color%Orange" Shortcuts="Shift+O" Paths="CustomTools&gt;Line Color" />
+  <ShortcutItem CommandName="." CommandId="CustomCtrl_%CustomCtrl_%CustomTools%Line Color%Green" Shortcuts="Shift+G" Paths="CustomTools&gt;Line Color" />
+  <ShortcutItem CommandName="." CommandId="CustomCtrl_%CustomCtrl_%CustomTools%Line Color%Azure" Shortcuts="Shift+A" Paths="CustomTools&gt;Line Color" />
+  <ShortcutItem CommandName="." CommandId="CustomCtrl_%CustomCtrl_%CustomTools%Line Color%Blue" Shortcuts="Shift+B" Paths="CustomTools&gt;Line Color" />
+  <ShortcutItem CommandName="." CommandId="CustomCtrl_%CustomCtrl_%CustomTools%Line Color%Magenta" Shortcuts="Shift+M" Paths="CustomTools&gt;Line Color" />
+  <ShortcutItem CommandName="." CommandId="CustomCtrl_%CustomCtrl_%CustomTools%Line Color%Light Grey" Shortcuts="Shift+H" Paths="CustomTools&gt;Line Color" />
+  <ShortcutItem CommandName="." CommandId="CustomCtrl_%CustomCtrl_%CustomTools%Line Color%Grey" Shortcuts="Shift+D" Paths="CustomTools&gt;Line Color" />
+  <ShortcutItem CommandName="." CommandId="CustomCtrl_%CustomCtrl_%CustomTools%Line Color%Reset" Shortcuts="Shift+X" Paths="CustomTools&gt;Line Color" />
+  <ShortcutItem CommandName="LineColor:Line Color ●" CommandId="CustomCtrl_%CustomCtrl_%CustomCtrl_%CustomTools%Line Color%LineColor%LineColor" Shortcuts="LC" Paths="CustomTools&gt;Line Color" />
+  <ShortcutItem CommandName="LineColor:Line &amp; Pattern Color ●" CommandId="CustomCtrl_%CustomCtrl_%CustomCtrl_%CustomTools%Line Color%LineColor%Line&amp;PatternColor" Shortcuts="PC" Paths="CustomTools&gt;Line Color" />
+  <ShortcutItem CommandName="Find Rooms" CommandId="CustomCtrl_%CustomCtrl_%CustomTools%Query%Find Rooms" Paths="CustomTools&gt;Query" />
+  <ShortcutItem CommandName="UPPERCASE" CommandId="CustomCtrl_%CustomCtrl_%CustomTools%Text%UPPERCASE" Shortcuts="Shift+U" Paths="CustomTools&gt;Text" />
+  <ShortcutItem CommandName="lowercase" CommandId="CustomCtrl_%CustomCtrl_%CustomTools%Text%lowercase" Shortcuts="Shift+L" Paths="CustomTools&gt;Text" />
+  <ShortcutItem CommandName="Sentencecase" CommandId="CustomCtrl_%CustomCtrl_%CustomTools%Text%Sentencecase" Shortcuts="Shift+S" Paths="CustomTools&gt;Text" />
+  <ShortcutItem CommandName="Symbols" CommandId="CustomCtrl_%CustomCtrl_%CustomTools%Text%Symbols" Paths="CustomTools&gt;Text" />
+  <ShortcutItem CommandName="ManageRevisions" CommandId="CustomCtrl_%CustomCtrl_%CustomTools%Revisions%Manage Revisions" Paths="CustomTools&gt;Revisions" />
+  <ShortcutItem CommandName="Set RevisionOn Sheets" CommandId="CustomCtrl_%CustomCtrl_%CustomTools%Revisions%Set Revision On Sheets" Paths="CustomTools&gt;Revisions" />
+  <ShortcutItem CommandName="Normy:Schody" CommandId="CustomCtrl_%CustomCtrl_%CustomCtrl_%CustomTools%Links%Normy%Schody" Paths="CustomTools&gt;Links" />
+  <ShortcutItem CommandName="Normy:Parking" CommandId="CustomCtrl_%CustomCtrl_%CustomCtrl_%CustomTools%Links%Normy%Parking" Paths="CustomTools&gt;Links" />
+  <ShortcutItem CommandName="Normy:Zábradlia" CommandId="CustomCtrl_%CustomCtrl_%CustomCtrl_%CustomTools%Links%Normy%Zabradlia" Paths="CustomTools&gt;Links" />
+  <ShortcutItem CommandName="Normy:532" CommandId="CustomCtrl_%CustomCtrl_%CustomCtrl_%CustomTools%Links%Normy%532" Paths="CustomTools&gt;Links" />
+  <ShortcutItem CommandName="Normy:Tabulka - R" CommandId="CustomCtrl_%CustomCtrl_%CustomCtrl_%CustomTools%Links%Normy%Tabulka - R" Paths="CustomTools&gt;Links" />
+  <ShortcutItem CommandName="Normy:Tabulka - U" CommandId="CustomCtrl_%CustomCtrl_%CustomCtrl_%CustomTools%Links%Normy%Tabulka - U" Paths="CustomTools&gt;Links" />
+  <ShortcutItem CommandName="Normy:Teplotechnická norma" CommandId="CustomCtrl_%CustomCtrl_%CustomCtrl_%CustomTools%Links%Normy%Teplotechnicka norma" Paths="CustomTools&gt;Links" />
+  <ShortcutItem CommandName="Normy:Materiály" CommandId="CustomCtrl_%CustomCtrl_%CustomCtrl_%CustomTools%Links%Normy%Materialy" Paths="CustomTools&gt;Links" />
+  <ShortcutItem CommandName="Keyboard shortcuts:Keyboardshortuts" CommandId="CustomCtrl_%CustomCtrl_%CustomCtrl_%CustomTools%Links%Keyboard shortcuts%Keyboard shortcuts" Paths="CustomTools&gt;Links" />
+  <ShortcutItem CommandName="Keyboard shortcuts:Download &amp; set keyboard shortcuts" CommandId="CustomCtrl_%CustomCtrl_%CustomCtrl_%CustomTools%Links%Keyboard shortcuts%Download &amp; set keyboard shortcuts" Paths="CustomTools&gt;Links" />
+  <ShortcutItem CommandName="Dashboards ●" CommandId="CustomCtrl_%CustomCtrl_%CustomTools%Analyse%Dashboards" Paths="CustomTools&gt;Analyse" />
+  <ShortcutItem CommandName="dynamoscripts:A4 count" CommandId="CustomCtrl_%CustomCtrl_%CustomCtrl_%CustomTools%dynamoscripts%dynamoscripts%A4count" Paths="CustomTools&gt;dynamoscripts" />
+  <ShortcutItem CommandName="dynamoscripts:Grids to 2D" CommandId="CustomCtrl_%CustomCtrl_%CustomCtrl_%CustomTools%dynamoscripts%dynamoscripts%GridsTo2D" Paths="CustomTools&gt;dynamoscripts" />
+  <ShortcutItem CommandName="dynamoscripts:Height to Parameter" CommandId="CustomCtrl_%CustomCtrl_%CustomCtrl_%CustomTools%dynamoscripts%dynamoscripts%HeightToParameter" Paths="CustomTools&gt;dynamoscripts" />
+  <ShortcutItem CommandName="dynamoscripts:Hide Internal Origin" CommandId="CustomCtrl_%CustomCtrl_%CustomCtrl_%CustomTools%dynamoscripts%dynamoscripts%ViewsControlInternalOrigin" Paths="CustomTools&gt;dynamoscripts" />
+  <ShortcutItem CommandName="dynamoscripts:DoorFlip Setter" CommandId="CustomCtrl_%CustomCtrl_%CustomCtrl_%CustomTools%dynamoscripts%dynamoscripts%DoorFlipSetter" Paths="CustomTools&gt;dynamoscripts" />
+  <ShortcutItem CommandName="Dynamo help" CommandId="CustomCtrl_%CustomCtrl_%CustomTools%Help%Dynamo help" Paths="CustomTools&gt;Help" />
+  <ShortcutItem CommandName="Update Now!" CommandId="CustomCtrl_%CustomCtrl_%CustomTools%Help%UpdateNow" Paths="CustomTools&gt;Help" />
+  <ShortcutItem CommandName="Help" CommandId="CustomCtrl_%CustomCtrl_%CustomTools%Help%Help" Paths="CustomTools&gt;Help" />
+  <ShortcutItem CommandName="About ●" CommandId="CustomCtrl_%CustomCtrl_%CustomTools%Help%About" Paths="CustomTools&gt;Help" />
   <ShortcutItem CommandName="Search" CommandId="CustomCtrl_%CustomCtrl_%pyRevit%pyRevit%Search" Shortcuts="Shift+F#PS" Paths="pyRevit&gt;pyRevit" />
   <ShortcutItem CommandName="Spy:Find All Loaded Assemblies" CommandId="CustomCtrl_%CustomCtrl_%CustomCtrl_%pyRevit%pyRevit%Spy%Find All Loaded Assemblies" Paths="pyRevit&gt;pyRevit" />
   <ShortcutItem CommandName="Spy:List Elements" CommandId="CustomCtrl_%CustomCtrl_%CustomCtrl_%pyRevit%pyRevit%Spy%List Elements" Paths="pyRevit&gt;pyRevit" />
@@ -188,7 +267,7 @@
   <ShortcutItem CommandName="Repo" CommandId="CustomCtrl_%CustomCtrl_%pyRevit%pyRevit%Repo" Paths="pyRevit&gt;pyRevit" />
   <ShortcutItem CommandName="apidocs" CommandId="CustomCtrl_%CustomCtrl_%pyRevit%pyRevit%apidocs" Paths="pyRevit&gt;pyRevit" />
   <ShortcutItem CommandName="emojis" CommandId="CustomCtrl_%CustomCtrl_%pyRevit%pyRevit%emojis" Paths="pyRevit&gt;pyRevit" />
-  <ShortcutItem CommandName="rpw Docs" CommandId="CustomCtrl_%CustomCtrl_%pyRevit%pyRevit%rpw Docs" Paths="pyRevit&gt;pyRevit" />
+  <ShortcutItem CommandName="rpw" CommandId="CustomCtrl_%CustomCtrl_%pyRevit%pyRevit%rpw Docs" Paths="pyRevit&gt;pyRevit" />
   <ShortcutItem CommandName="Icons8" CommandId="CustomCtrl_%CustomCtrl_%pyRevit%pyRevit%Icons8" Paths="pyRevit&gt;pyRevit" />
   <ShortcutItem CommandName="RegEx Tool" CommandId="CustomCtrl_%CustomCtrl_%pyRevit%pyRevit%RegEx Tool" Paths="pyRevit&gt;pyRevit" />
   <ShortcutItem CommandName="Report Bugs" CommandId="CustomCtrl_%CustomCtrl_%pyRevit%pyRevit%Report Bugs" Paths="pyRevit&gt;pyRevit" />
@@ -253,12 +332,6 @@
   <ShortcutItem CommandName="Inspect:Lines Per View Counter" CommandId="CustomCtrl_%CustomCtrl_%CustomCtrl_%pyRevit%Analysis%Inspect%LinesPerViewCounter" Paths="pyRevit&gt;Analysis" />
   <ShortcutItem CommandName="Inspect:List Elements of Selected Level(s)" CommandId="CustomCtrl_%CustomCtrl_%CustomCtrl_%pyRevit%Analysis%Inspect%ListElementsOfSelectedLevel" Paths="pyRevit&gt;Analysis" />
   <ShortcutItem CommandName="Inspect:Lists Family Sizes" CommandId="CustomCtrl_%CustomCtrl_%CustomCtrl_%pyRevit%Analysis%Inspect%ListFamilySizeCreator" Paths="pyRevit&gt;Analysis" />
-  <ShortcutItem CommandName="ManagePackages" CommandId="CustomCtrl_%CustomCtrl_%pyRevit%Packages &amp; Tags%Manage Packages" Paths="pyRevit&gt;Packages &amp; Tags" />
-  <ShortcutItem CommandName="ManageTags" CommandId="CustomCtrl_%CustomCtrl_%pyRevit%Packages &amp; Tags%Manage Tags" Paths="pyRevit&gt;Packages &amp; Tags" />
-  <ShortcutItem CommandName="TagSelected" CommandId="CustomCtrl_%CustomCtrl_%pyRevit%Packages &amp; Tags%Tag" Paths="pyRevit&gt;Packages &amp; Tags" />
-  <ShortcutItem CommandName="Match Tags" CommandId="CustomCtrl_%CustomCtrl_%pyRevit%Packages &amp; Tags%Match Tags" Paths="pyRevit&gt;Packages &amp; Tags" />
-  <ShortcutItem CommandName="Clear Tags" CommandId="CustomCtrl_%CustomCtrl_%pyRevit%Packages &amp; Tags%Clear Tags" Paths="pyRevit&gt;Packages &amp; Tags" />
-  <ShortcutItem CommandName="Export Tagged" CommandId="CustomCtrl_%CustomCtrl_%pyRevit%Packages &amp; Tags%Export Tagged" Paths="pyRevit&gt;Packages &amp; Tags" />
   <ShortcutItem CommandName="Match:Match ●" CommandId="CustomCtrl_%CustomCtrl_%CustomCtrl_%pyRevit%Modify%Match%Match" Paths="pyRevit&gt;Modify" />
   <ShortcutItem CommandName="Match:Match paint" CommandId="CustomCtrl_%CustomCtrl_%CustomCtrl_%pyRevit%Modify%Match%Match Paint" Paths="pyRevit&gt;Modify" />
   <ShortcutItem CommandName="Match:Match properties" CommandId="CustomCtrl_%CustomCtrl_%CustomCtrl_%pyRevit%Modify%Match%Match Properties" Paths="pyRevit&gt;Modify" />
@@ -370,98 +443,6 @@
   <ShortcutItem CommandName="Wipe:Wipe Unused Filters" CommandId="CustomCtrl_%CustomCtrl_%CustomCtrl_%pyRevit%Project%Wipe%Wipe Unused Filters" Paths="pyRevit&gt;Project" />
   <ShortcutItem CommandName="Wipe:Wipe Unused View Templates" CommandId="CustomCtrl_%CustomCtrl_%CustomCtrl_%pyRevit%Project%Wipe%Wipe Unused View Templates" Paths="pyRevit&gt;Project" />
   <ShortcutItem CommandName="Wipe:Wipe Empty Elevation Tags" CommandId="CustomCtrl_%CustomCtrl_%CustomCtrl_%pyRevit%Project%Wipe%Wipe Empty Elevation Tags" Paths="pyRevit&gt;Project" />
-  <ShortcutItem CommandName="Template:Generate FilledRegion Swatches" CommandId="CustomCtrl_%CustomCtrl_%CustomCtrl_%pyRevit%Templates%Template%Generate FilledRegion Swatches" Paths="pyRevit&gt;Templates" />
-  <ShortcutItem CommandName="Template:Generate FilledRegion Types from Fill Patterns" CommandId="CustomCtrl_%CustomCtrl_%CustomCtrl_%pyRevit%Templates%Template%Generate FilledRegion Types from Fill Patterns" Paths="pyRevit&gt;Templates" />
-  <ShortcutItem CommandName="Views Sheets and Schedules Eraser:Views, Sheets &amp;Schedule Eraser" CommandId="CustomCtrl_%CustomCtrl_%CustomCtrl_%CustomTools%Batch%Views Sheets and Schedules Eraser%Views Sheets and Schedules Eraser" Paths="CustomTools&gt;Batch" />
-  <ShortcutItem CommandName="Views Sheets and Schedules Eraser:ParameterValue Eraser" CommandId="CustomCtrl_%CustomCtrl_%CustomCtrl_%CustomTools%Batch%Views Sheets and Schedules Eraser%Parameter Eraser" Paths="CustomTools&gt;Batch" />
-  <ShortcutItem CommandName="Views Sheets and Schedules Eraser:All Materials &amp; Lines Eraser" CommandId="CustomCtrl_%CustomCtrl_%CustomCtrl_%CustomTools%Batch%Views Sheets and Schedules Eraser%All Line and Materials Eraser" Paths="CustomTools&gt;Batch" />
-  <ShortcutItem CommandName="Model checker:ModelChecker" CommandId="CustomCtrl_%CustomCtrl_%CustomCtrl_%CustomTools%Batch%Model checker%ModelChecker" Shortcuts="MC" Paths="CustomTools&gt;Batch" />
-  <ShortcutItem CommandName="Model checker:Material &amp; Line purge" CommandId="CustomCtrl_%CustomCtrl_%CustomCtrl_%CustomTools%Batch%Model checker%Line and materials purge" Shortcuts="LP" Paths="CustomTools&gt;Batch" />
-  <ShortcutItem CommandName="Model checker:DWG schedule" CommandId="CustomCtrl_%CustomCtrl_%CustomCtrl_%CustomTools%Batch%Model checker%DWG schedule" Paths="CustomTools&gt;Batch" />
-  <ShortcutItem CommandName="Model checker:Critical Warning schedule" CommandId="CustomCtrl_%CustomCtrl_%CustomCtrl_%CustomTools%Batch%Model checker%Critical Warning schedule" Paths="CustomTools&gt;Batch" />
-  <ShortcutItem CommandName="Model checker:All Warningsschedule" CommandId="CustomCtrl_%CustomCtrl_%CustomCtrl_%CustomTools%Batch%Model checker%Warning schedule" Paths="CustomTools&gt;Batch" />
-  <ShortcutItem CommandName="Model checker:All Warningscount" CommandId="CustomCtrl_%CustomCtrl_%CustomCtrl_%CustomTools%Batch%Model checker%Warning count" Paths="CustomTools&gt;Batch" />
-  <ShortcutItem CommandName="Model checker:Detail Group schedule" CommandId="CustomCtrl_%CustomCtrl_%CustomCtrl_%CustomTools%Batch%Model checker%Detail Group Schedule" Paths="CustomTools&gt;Batch" />
-  <ShortcutItem CommandName="Model checker:In Place Family schedule" CommandId="CustomCtrl_%CustomCtrl_%CustomCtrl_%CustomTools%Batch%Model checker%InPlaceFamilySchedule" Paths="CustomTools&gt;Batch" />
-  <ShortcutItem CommandName="Model checker:Not Placed Views schedule" CommandId="CustomCtrl_%CustomCtrl_%CustomCtrl_%CustomTools%Batch%Model checker%NotPlacedViewsSchedule" Paths="CustomTools&gt;Batch" />
-  <ShortcutItem CommandName="Model checker:2D Elements per View" CommandId="CustomCtrl_%CustomCtrl_%CustomCtrl_%CustomTools%Batch%Model checker%2DelementsPerView" Paths="CustomTools&gt;Batch" />
-  <ShortcutItem CommandName="Model checker:Line Style Usage" CommandId="CustomCtrl_%CustomCtrl_%CustomCtrl_%CustomTools%Batch%Model checker%LineStyleUsage" Paths="CustomTools&gt;Batch" />
-  <ShortcutItem CommandName="Model checker:Text Note Types schedule" CommandId="CustomCtrl_%CustomCtrl_%CustomCtrl_%CustomTools%Batch%Model checker%TextNoteTypesShedule" Paths="CustomTools&gt;Batch" />
-  <ShortcutItem CommandName="Model checker:AllCaps finder" CommandId="CustomCtrl_%CustomCtrl_%CustomCtrl_%CustomTools%Batch%Model checker%AllCapsFinder" Paths="CustomTools&gt;Batch" />
-  <ShortcutItem CommandName="Model checker:View Filter Schedule" CommandId="CustomCtrl_%CustomCtrl_%CustomCtrl_%CustomTools%Batch%Model checker%ViewFilterSchedule" Paths="CustomTools&gt;Batch" />
-  <ShortcutItem CommandName="Model checker:Noname Reference Plane schedule" CommandId="CustomCtrl_%CustomCtrl_%CustomCtrl_%CustomTools%Batch%Model checker%NoNameReferencePlaneSchedule" Paths="CustomTools&gt;Batch" />
-  <ShortcutItem CommandName="Model checker:OwnerSheet" CommandId="CustomCtrl_%CustomCtrl_%CustomCtrl_%CustomTools%Batch%Model checker%OwnerSheet" Shortcuts="OS" Paths="CustomTools&gt;Batch" />
-  <ShortcutItem CommandName="Model checker:Shared Parameter Schedule ●" CommandId="CustomCtrl_%CustomCtrl_%CustomCtrl_%CustomTools%Batch%Model checker%SharedParametersSchedule" Paths="CustomTools&gt;Batch" />
-  <ShortcutItem CommandName="Model checker:Revision Cloud Schedule schedule" CommandId="CustomCtrl_%CustomCtrl_%CustomCtrl_%CustomTools%Batch%Model checker%RevisionCloudSchedule" Paths="CustomTools&gt;Batch" />
-  <ShortcutItem CommandName="Model checker:Import Report ●" CommandId="CustomCtrl_%CustomCtrl_%CustomCtrl_%CustomTools%Batch%Model checker%Import Report" Paths="CustomTools&gt;Batch" />
-  <ShortcutItem CommandName="Batch:Výška a označenieprierazov" CommandId="CustomCtrl_%CustomCtrl_%CustomCtrl_%CustomTools%Batch%Batch%Vyska prierazov" Paths="CustomTools&gt;Batch" />
-  <ShortcutItem CommandName="Batch:Create ShortRoom Numbers" CommandId="CustomCtrl_%CustomCtrl_%CustomCtrl_%CustomTools%Batch%Batch%Create Short Room Numbers" Paths="CustomTools&gt;Batch" />
-  <ShortcutItem CommandName="Batch:CenterRoom Tags" CommandId="CustomCtrl_%CustomCtrl_%CustomCtrl_%CustomTools%Batch%Batch%CenterRoomTags" Shortcuts="CE" Paths="CustomTools&gt;Batch" />
-  <ShortcutItem CommandName="Batch:CenterArea Tags" CommandId="CustomCtrl_%CustomCtrl_%CustomCtrl_%CustomTools%Batch%Batch%CenterAreaTags" Paths="CustomTools&gt;Batch" />
-  <ShortcutItem CommandName="PickCategory:PickCategory" CommandId="CustomCtrl_%CustomCtrl_%CustomCtrl_%CustomTools%Tools%PickCategory%PickCategory" Shortcuts="Shift+C" Paths="CustomTools&gt;Tools" />
-  <ShortcutItem CommandName="PickCategory:ID Of ElementIn Linked File" CommandId="CustomCtrl_%CustomCtrl_%CustomCtrl_%CustomTools%Tools%PickCategory%LinkedElementID" Paths="CustomTools&gt;Tools" />
-  <ShortcutItem CommandName="PickCategory:UID getter" CommandId="CustomCtrl_%CustomCtrl_%CustomCtrl_%CustomTools%Tools%PickCategory%UIDgetter" Paths="CustomTools&gt;Tools" />
-  <ShortcutItem CommandName="PickCategory:UID select" CommandId="CustomCtrl_%CustomCtrl_%CustomCtrl_%CustomTools%Tools%PickCategory%UIDselect" Paths="CustomTools&gt;Tools" />
-  <ShortcutItem CommandName="SlopeCalc" CommandId="CustomCtrl_%CustomCtrl_%CustomTools%Tools%Spady" Paths="CustomTools&gt;Tools" />
-  <ShortcutItem CommandName="TopoPoints" CommandId="CustomCtrl_%CustomCtrl_%CustomTools%Tools%TopoPoints" Paths="CustomTools&gt;Tools" />
-  <ShortcutItem CommandName="Place View On Sheet" CommandId="CustomCtrl_%CustomCtrl_%CustomTools%Tools%Place View on Sheet" Shortcuts="PV" Paths="CustomTools&gt;Tools" />
-  <ShortcutItem CommandName="DeleteActiveView" CommandId="CustomCtrl_%CustomCtrl_%CustomTools%Tools%DeleteActiveView" Paths="CustomTools&gt;Tools" />
-  <ShortcutItem CommandName="ExportSchedule" CommandId="CustomCtrl_%CustomCtrl_%CustomTools%Tools%ExportSchedule" Paths="CustomTools&gt;Tools" />
-  <ShortcutItem CommandName="Same place" CommandId="CustomCtrl_%CustomCtrl_%CustomTools%Tools%Same place" Paths="CustomTools&gt;Tools" />
-  <ShortcutItem CommandName="Wall Disallow Join" CommandId="CustomCtrl_%CustomCtrl_%CustomTools%Tools%WallDisallowJoin" Paths="CustomTools&gt;Tools" />
-  <ShortcutItem CommandName="Open Selected Views" CommandId="CustomCtrl_%CustomCtrl_%CustomTools%Tools%Open Selected Views" Paths="CustomTools&gt;Tools" />
-  <ShortcutItem CommandName="SumParameters" CommandId="CustomCtrl_%CustomCtrl_%CustomTools%Tools%Sum" Paths="CustomTools&gt;Tools" />
-  <ShortcutItem CommandName="OpenedViews" CommandId="CustomCtrl_%CustomCtrl_%CustomTools%Tools%OpenedViews" Paths="CustomTools&gt;Tools" />
-  <ShortcutItem CommandName="." CommandId="CustomCtrl_%CustomCtrl_%CustomTools%Line Color%Red" Shortcuts="Shift+R" Paths="CustomTools&gt;Line Color" />
-  <ShortcutItem CommandName="." CommandId="CustomCtrl_%CustomCtrl_%CustomTools%Line Color%Orange" Shortcuts="Shift+O" Paths="CustomTools&gt;Line Color" />
-  <ShortcutItem CommandName="." CommandId="CustomCtrl_%CustomCtrl_%CustomTools%Line Color%Green" Shortcuts="Shift+G" Paths="CustomTools&gt;Line Color" />
-  <ShortcutItem CommandName="." CommandId="CustomCtrl_%CustomCtrl_%CustomTools%Line Color%Azure" Shortcuts="Shift+A" Paths="CustomTools&gt;Line Color" />
-  <ShortcutItem CommandName="." CommandId="CustomCtrl_%CustomCtrl_%CustomTools%Line Color%Blue" Shortcuts="Shift+B" Paths="CustomTools&gt;Line Color" />
-  <ShortcutItem CommandName="." CommandId="CustomCtrl_%CustomCtrl_%CustomTools%Line Color%Magenta" Shortcuts="Shift+M" Paths="CustomTools&gt;Line Color" />
-  <ShortcutItem CommandName="." CommandId="CustomCtrl_%CustomCtrl_%CustomTools%Line Color%Light Grey" Shortcuts="Shift+H" Paths="CustomTools&gt;Line Color" />
-  <ShortcutItem CommandName="." CommandId="CustomCtrl_%CustomCtrl_%CustomTools%Line Color%Grey" Shortcuts="Shift+D" Paths="CustomTools&gt;Line Color" />
-  <ShortcutItem CommandName="." CommandId="CustomCtrl_%CustomCtrl_%CustomTools%Line Color%Reset" Shortcuts="Shift+X" Paths="CustomTools&gt;Line Color" />
-  <ShortcutItem CommandName="Line Color ●" CommandId="CustomCtrl_%CustomCtrl_%CustomTools%Line Color%LineColor" Shortcuts="LC" Paths="CustomTools&gt;Line Color" />
-  <ShortcutItem CommandName="Find Rooms" CommandId="CustomCtrl_%CustomCtrl_%CustomTools%Query%Find Rooms" Paths="CustomTools&gt;Query" />
-  <ShortcutItem CommandName="UPPERCASE" CommandId="CustomCtrl_%CustomCtrl_%CustomTools%Text%UPPERCASE" Shortcuts="Shift+U" Paths="CustomTools&gt;Text" />
-  <ShortcutItem CommandName="lowercase" CommandId="CustomCtrl_%CustomCtrl_%CustomTools%Text%lowercase" Shortcuts="Shift+L" Paths="CustomTools&gt;Text" />
-  <ShortcutItem CommandName="Sentencecase" CommandId="CustomCtrl_%CustomCtrl_%CustomTools%Text%Sentencecase" Shortcuts="Shift+S" Paths="CustomTools&gt;Text" />
-  <ShortcutItem CommandName="Symbols" CommandId="CustomCtrl_%CustomCtrl_%CustomTools%Text%Symbols" Paths="CustomTools&gt;Text" />
-  <ShortcutItem CommandName="ManageRevisions" CommandId="CustomCtrl_%CustomCtrl_%CustomTools%Revisions%Manage Revisions" Paths="CustomTools&gt;Revisions" />
-  <ShortcutItem CommandName="Set RevisionOn Sheets" CommandId="CustomCtrl_%CustomCtrl_%CustomTools%Revisions%Set Revision On Sheets" Paths="CustomTools&gt;Revisions" />
-  <ShortcutItem CommandName="Normy:Schody" CommandId="CustomCtrl_%CustomCtrl_%CustomCtrl_%CustomTools%Links%Normy%Schody" Paths="CustomTools&gt;Links" />
-  <ShortcutItem CommandName="Normy:Parking" CommandId="CustomCtrl_%CustomCtrl_%CustomCtrl_%CustomTools%Links%Normy%Parking" Paths="CustomTools&gt;Links" />
-  <ShortcutItem CommandName="Normy:Zábradlia" CommandId="CustomCtrl_%CustomCtrl_%CustomCtrl_%CustomTools%Links%Normy%Zabradlia" Paths="CustomTools&gt;Links" />
-  <ShortcutItem CommandName="Normy:532" CommandId="CustomCtrl_%CustomCtrl_%CustomCtrl_%CustomTools%Links%Normy%532" Paths="CustomTools&gt;Links" />
-  <ShortcutItem CommandName="Normy:Tabulka - R" CommandId="CustomCtrl_%CustomCtrl_%CustomCtrl_%CustomTools%Links%Normy%Tabulka - R" Paths="CustomTools&gt;Links" />
-  <ShortcutItem CommandName="Normy:Tabulka - U" CommandId="CustomCtrl_%CustomCtrl_%CustomCtrl_%CustomTools%Links%Normy%Tabulka - U" Paths="CustomTools&gt;Links" />
-  <ShortcutItem CommandName="Normy:Teplotechnická norma" CommandId="CustomCtrl_%CustomCtrl_%CustomCtrl_%CustomTools%Links%Normy%Teplotechnicka norma" Paths="CustomTools&gt;Links" />
-  <ShortcutItem CommandName="Normy:Materiály" CommandId="CustomCtrl_%CustomCtrl_%CustomCtrl_%CustomTools%Links%Normy%Materialy" Paths="CustomTools&gt;Links" />
-  <ShortcutItem CommandName="Keyboard shortcuts:Keyboardshortuts" CommandId="CustomCtrl_%CustomCtrl_%CustomCtrl_%CustomTools%Links%Keyboard shortcuts%Keyboard shortcuts" Paths="CustomTools&gt;Links" />
-  <ShortcutItem CommandName="Keyboard shortcuts:Download &amp; set keyboard shortcuts" CommandId="CustomCtrl_%CustomCtrl_%CustomCtrl_%CustomTools%Links%Keyboard shortcuts%Download &amp; set keyboard shortcuts" Paths="CustomTools&gt;Links" />
-  <ShortcutItem CommandName="Dashboards ●" CommandId="CustomCtrl_%CustomCtrl_%CustomTools%Analyse%Dashboards" Paths="CustomTools&gt;Analyse" />
-  <ShortcutItem CommandName="dynamoscripts:A4 count" CommandId="CustomCtrl_%CustomCtrl_%CustomCtrl_%CustomTools%dynamoscripts%dynamoscripts%A4count" Paths="CustomTools&gt;dynamoscripts" />
-  <ShortcutItem CommandName="dynamoscripts:Grids to 2D" CommandId="CustomCtrl_%CustomCtrl_%CustomCtrl_%CustomTools%dynamoscripts%dynamoscripts%GridsTo2D" Paths="CustomTools&gt;dynamoscripts" />
-  <ShortcutItem CommandName="dynamoscripts:Height to Parameter" CommandId="CustomCtrl_%CustomCtrl_%CustomCtrl_%CustomTools%dynamoscripts%dynamoscripts%HeightToParameter" Paths="CustomTools&gt;dynamoscripts" />
-  <ShortcutItem CommandName="dynamoscripts:Hide Internal Origin" CommandId="CustomCtrl_%CustomCtrl_%CustomCtrl_%CustomTools%dynamoscripts%dynamoscripts%ViewsControlInternalOrigin" Paths="CustomTools&gt;dynamoscripts" />
-  <ShortcutItem CommandName="dynamoscripts:DoorFlip Setter" CommandId="CustomCtrl_%CustomCtrl_%CustomCtrl_%CustomTools%dynamoscripts%dynamoscripts%DoorFlipSetter" Paths="CustomTools&gt;dynamoscripts" />
-  <ShortcutItem CommandName="Dynamo help" CommandId="CustomCtrl_%CustomCtrl_%CustomTools%Help%Dynamo help" Paths="CustomTools&gt;Help" />
-  <ShortcutItem CommandName="Update Now!" CommandId="CustomCtrl_%CustomCtrl_%CustomTools%Help%UpdateNow" Paths="CustomTools&gt;Help" />
-  <ShortcutItem CommandName="Help" CommandId="CustomCtrl_%CustomCtrl_%CustomTools%Help%Help" Paths="CustomTools&gt;Help" />
-  <ShortcutItem CommandName="About ●" CommandId="CustomCtrl_%CustomCtrl_%CustomTools%Help%About" Paths="CustomTools&gt;Help" />
-  <ShortcutItem CommandName="Create Schedule from CSV" CommandId="CustomCtrl_%CustomCtrl_%WIPscripts%NEW%Create Schedule from CSV" Paths="WIPscripts&gt;NEW" />
-  <ShortcutItem CommandName="Dynamo BIM GUI ●" CommandId="CustomCtrl_%CustomCtrl_%WIPscripts%NEW%DynamoGUI" Paths="WIPscripts&gt;NEW" />
-  <ShortcutItem CommandName="Import CAD" CommandId="CustomCtrl_%CustomCtrl_%WIPscripts%NEW%Import CAD" Paths="WIPscripts&gt;NEW" />
-  <ShortcutItem CommandName="Reload CAD" CommandId="CustomCtrl_%CustomCtrl_%WIPscripts%NEW%Reload CAD" Paths="WIPscripts&gt;NEW" />
-  <ShortcutItem CommandName="Sort and enumerate" CommandId="CustomCtrl_%CustomCtrl_%WIPscripts%NEW%SortAndEnumerate" Paths="WIPscripts&gt;NEW" />
-  <ShortcutItem CommandName="Text" CommandId="CustomCtrl_%CustomCtrl_%WIPscripts%NEW%Text" Paths="WIPscripts&gt;NEW" />
-  <ShortcutItem CommandName="uniqueTypes" CommandId="CustomCtrl_%CustomCtrl_%WIPscripts%NEW%uniqueTypes" Paths="WIPscripts&gt;NEW" />
-  <ShortcutItem CommandName="sharedParameterAdder" CommandId="CustomCtrl_%CustomCtrl_%WIPscripts%NEW%sharedParameterAdder" Paths="WIPscripts&gt;NEW" />
-  <ShortcutItem CommandName="Not Placed Schedules" CommandId="CustomCtrl_%CustomCtrl_%WIPscripts%NEW%NotPlacedSchedules" Paths="WIPscripts&gt;NEW" />
-  <ShortcutItem CommandName="No Parameter" CommandId="CustomCtrl_%CustomCtrl_%WIPscripts%NEW%NoParameter" Paths="WIPscripts&gt;NEW" />
-  <ShortcutItem CommandName="skladby" CommandId="CustomCtrl_%CustomCtrl_%WIPscripts%NEW%skladby" Paths="WIPscripts&gt;NEW" />
-  <ShortcutItem CommandName="Reset Overrides" CommandId="CustomCtrl_%CustomCtrl_%WIPscripts%NEW%ResetOverrides" Paths="WIPscripts&gt;NEW" />
-  <ShortcutItem CommandName="Reset Overrides KLG" CommandId="CustomCtrl_%CustomCtrl_%WIPscripts%NEW%ResetOverridesKLG" Paths="WIPscripts&gt;NEW" />
   <ShortcutItem CommandName="Paste; Paste from Clipboard" CommandId="ID_EDIT_PASTE" Paths="Modify&gt;Clipboard" />
   <ShortcutItem CommandName="Paste:Aligned to Selected Levels" CommandId="ID_EDIT_PASTE_ALIGNED_LEVEL_BY_NAME" Shortcuts="PA" Paths="Modify&gt;Clipboard" />
   <ShortcutItem CommandName="Paste:Aligned to Selected Views" CommandId="ID_EDIT_PASTE_ALIGNED_VIEWS_BY_NAME" Paths="Modify&gt;Clipboard" />
