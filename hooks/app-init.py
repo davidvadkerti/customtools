@@ -10,12 +10,13 @@ import os
 import subprocess
 try:
     appdataPath = os.getenv('APPDATA')
-    # replacing CustomToolsUpdater.cmd file for new one
+    # replacing CustomToolsUpdater.cmd file each time when revit starts
     # running InitUpdate.cmd script at:
     # %AppData%\\Roaming\\pyRevit\\Extensions\\CustomTools.extension\\hooks\\InitUpdate.cmd
     newCTupdatePath = appdataPath + '\\pyRevit\\Extensions\\CustomTools.extension\\hooks\\InitUpdate.cmd'
     u = subprocess.Popen([newCTupdatePath])
 
+    # updating CustomTools from the git repository
     # running CustomToolsUpdater.cmd script at:
     # %AppData%\\Roaming\\pyRevit\\Extensions\\CustomTools.extension\\updater\\CustomToolsUpdater.cmd
     updaterPath = appdataPath + '\\pyRevit\\Extensions\\CustomTools.extension\\updater\\CustomToolsUpdater.cmd'

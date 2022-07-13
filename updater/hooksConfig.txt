@@ -3,7 +3,8 @@
 index
 123456789012
 
-Help - https://gfi.miraheze.org/wiki/CustomTools_Hooks
+video manual - https://youtu.be/7tK3jUSZikg
+docs - https://customtools.notion.site/Hooks-1b88e91b2a764579922dbc3f2450e214
 
 #	HookName							Cancelable
 ---------------------------------------------------
@@ -20,4 +21,4 @@ Help - https://gfi.miraheze.org/wiki/CustomTools_Hooks
 11	View, Schedule or Sheet Deletion	Y
 12	Save List Of Opened Views			Y
 
-File location - C:\pyRevitExtensions\CustomTools\hooksConfig.txt
+Move this file to this location - C:\pyRevitExtensions\CustomTools\hooksConfig.txt
