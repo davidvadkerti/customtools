@@ -174,11 +174,14 @@ if dialog:
                         # print("used")
                         # print(opng_num_index)
                 opng_id = zerosNum(opng_num)
-                # print(str(opng_id) + " - " +str(opng))
+                opng_mark = spclst + "." + level + "." + opng_id
 
-                # setting the parameter value
+                # setting the parameter values - just numbers
                 opng_num_param = element.LookupParameter("Cislo Prierazu")
+                # setting the parameter values - all opening id string
                 opng_num_param.Set(opng_id)
+                opng_mark_param = element.LookupParameter("Cislo Prvku")
+                opng_mark_param.Set(opng_mark)
             except:
                 pass
 
