@@ -78,12 +78,12 @@ if dialog:
         if parameter:
             parameter.Set("no data")
 
-    # adding 00 to one digit numbers
+    # adding leading zeros to one digit numbers
     def zerosNum(a):
         if a < 10 and a > 0:
-            a = "00"+str(a)
-        elif a < 100:
             a = "0"+str(a)
+        # elif a < 100:
+        #     a = "0"+str(a)
         return str(a)
 
     def poschodieSetter(element,levelElement):
