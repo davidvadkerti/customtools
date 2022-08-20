@@ -5,8 +5,13 @@ from pyrevit import revit, EXEC_PARAMS
 
 doc = EXEC_PARAMS.event_doc
 
+# door mirror flip states
 left = "L"
 right = "P"
+
+# window mirror flip states
+flipped = "1"
+unflipped = "0"
 
 def door_swing_setter(doc):
     # Auto Door flip setter
@@ -29,7 +34,9 @@ def win_swing_setter(doc):
     windows = FilteredElementCollector(doc) \
             .OfCategory(BuiltInCategory.OST_Windows) \
             .WhereElementIsNotElementType()
-    param_name = 'Window Swing'
+    param_name = 'Window Flip'
+    param_name_obsolete = 'Window Swing'
+
     with revit.Transaction('Auto Window Flip Setter'):
         for w in windows:
             w_type_Id = w.GetTypeId()
@@ -41,11 +48,21 @@ def win_swing_setter(doc):
                 if filterp and filterp.AsString() != "stavebne upravy":
                     param = w.LookupParameter(param_name)
                     if param:
-                        # default window is Right
+                        # default window is unflipped
                         if w.Mirrored:
-                            param.Set(left)
+                            param.Set(flipped)
                         else:
-                            param.Set(right)
+                            param.Set(unflipped)
+                    # Obsolete parameter name for backward compatibility. 
+                    # This is not going to be supported in the future.
+                    # The parameter name should ne changed to "Window Flip".
+                    param = w.LookupParameter(param_name_obsolete)
+                    if param:
+                        # default window is unflipped
+                        if w.Mirrored:
+                            param.Set(flipped)
+                        else:
+                            param.Set(unflipped)
 
 
 if not doc.IsFamilyDocument:
