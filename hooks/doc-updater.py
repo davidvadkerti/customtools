@@ -10,8 +10,8 @@ left = "L"
 right = "P"
 
 # window mirror flip states
-flipped = "1"
-unflipped = "0"
+flipped = "L"
+unflipped = "P"
 
 def door_swing_setter(doc):
     # Auto Door flip setter
