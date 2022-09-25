@@ -193,8 +193,10 @@ if dialog:
         else:
             try: return item.Document.GetElement(item.get_Parameter(BuiltInParameter.INSTANCE_REFERENCE_LEVEL_PARAM).AsElementId())
             except: 
-                try: return item.Document.GetElement(item.get_Parameter(BuiltInParameter.INSTANCE_SCHEDULE_ONLY_LEVEL_PARAM).AsElementId())
-                except: pass
+                try:
+                    return item.Document.GetElement(item.get_Parameter(BuiltInParameter.INSTANCE_SCHEDULE_ONLY_LEVEL_PARAM).AsElementId())
+                except:
+                    pass
 
     t = Transaction(doc, "Vyska a oznacenie prierazov")
     t.Start()
@@ -283,8 +285,14 @@ if dialog:
 
     for element in genericModel_collector:
         try:
-            levelElement = GetLevel(element)
-            # setting parameters
+            # Workplane based elements
+            try:
+                levelElement = GetLevel(element)
+            # facebased elements
+            except:
+                level = element.LevelId
+                levelElement = Document.GetElement(doc,level)
+        #   setting parameters
             poschodieSetter(element,levelElement)
         except:
             skipped(element,"Poschodie")
