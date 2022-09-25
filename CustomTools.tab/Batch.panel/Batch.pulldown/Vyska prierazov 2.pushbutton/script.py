@@ -131,6 +131,10 @@ if dialog:
                     # wc = wall circular
                     # opening specs
                     opng = [level, spclst, [CircularMark, diameterValue, fire_rating]]
+                    # seting dimension parameter "Rozmer", e.g. "Ø400"
+                    dim_param = element.LookupParameter("Rozmer")
+                    dim_param_value = "Ø" + str(diameterValue)
+                    dim_param.Set(dim_param_value)
                 except:
                     # rectangular windows
                     width_param = element.LookupParameter(WidthName).AsDouble()
@@ -144,6 +148,10 @@ if dialog:
                     # RectMark >>> wr = wall rectengular
                     # opening specs
                     opng = [level, spclst, [RectMark, widthValue, heightDepthValue, fire_rating]]
+                    # seting dimension parameter "Rozmer", e.g. 400x700
+                    dim_param = element.LookupParameter("Rozmer")
+                    dim_param_value = str(widthValue) + "x" + str(heightDepthValue) 
+                    dim_param.Set(dim_param_value)
 
                 # sorting and numbering openings
                 # prefix specialist + level, e.g. VZ01
