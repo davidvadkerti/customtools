@@ -145,7 +145,7 @@ if dialog:
                     fire_rating = element.LookupParameter("Fire_Rating").AsString()
                     spclst = element.LookupParameter("Profesia").AsString()
                     level = element.LookupParameter("Poschodie").AsString()
-                    
+
                     # windows with Depth not equal with Wall width - niky
                     # not through the wall
                     try:
@@ -334,7 +334,7 @@ if dialog:
 
     for element in genericModel_collector:
         # setting Mark values - atributes are parameters names, gmc = generic model circular
-        markSetter(element,"Diameter","gmc","Width","Depth","gmr")
+        markSetter(element,"Diameter","gmc","Width","Length","gmr")
 
     t.Commit()
 
