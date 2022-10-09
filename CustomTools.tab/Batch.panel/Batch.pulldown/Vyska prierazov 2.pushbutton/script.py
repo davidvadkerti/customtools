@@ -145,13 +145,31 @@ if dialog:
                     fire_rating = element.LookupParameter("Fire_Rating").AsString()
                     spclst = element.LookupParameter("Profesia").AsString()
                     level = element.LookupParameter("Poschodie").AsString()
-                    # RectMark >>> wr = wall rectengular
-                    # opening specs
-                    opng = [level, spclst, [RectMark, widthValue, heightDepthValue, fire_rating]]
-                    # seting dimension parameter "Rozmer", e.g. 400x700
-                    dim_param = element.LookupParameter("Rozmer")
-                    dim_param_value = str(widthValue) + "x" + str(heightDepthValue) 
-                    dim_param.Set(dim_param_value)
+                    
+                    # windows with Depth not equal with Wall width - niky
+                    # not through the wall
+                    try:
+                        DepthName = "Hlbka"
+                        depth_param = element.LookupParameter(DepthName).AsDouble()
+                        depthValue = feet2mm(depth_param)
+
+                        # RectMark >>> wr = wall rectengular
+                        # opening specs
+                        opng = [level, spclst, [RectMark, widthValue, heightDepthValue, fire_rating, depthValue]]
+                        # seting dimension parameter "Rozmer", e.g. 400x700
+                        dim_param = element.LookupParameter("Rozmer")
+                        dim_param_value = str(widthValue) + "x" + str(heightDepthValue) + "x" + str(depthValue)
+                        dim_param.Set(dim_param_value)
+
+                    # standard rectangular windows - through the wall
+                    except:    
+                        # RectMark >>> wr = wall rectengular
+                        # opening specs
+                        opng = [level, spclst, [RectMark, widthValue, heightDepthValue, fire_rating]]
+                        # seting dimension parameter "Rozmer", e.g. 400x700
+                        dim_param = element.LookupParameter("Rozmer")
+                        dim_param_value = str(widthValue) + "x" + str(heightDepthValue) 
+                        dim_param.Set(dim_param_value)
 
                 # sorting and numbering openings
                 # prefix specialist + level, e.g. VZ01
