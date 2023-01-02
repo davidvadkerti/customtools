@@ -30,8 +30,8 @@ criticalWarnings = ['Elements have duplicate "Type Mark" values',
 # default paths for settings
 def_hookLogs = "L:\\customToolslogs\\hooksLogs"
 def_revitBuildLogs = "L:\\customToolslogs\\versions.log"
-# 2021.1.6, 2022.1.3, 2023.0.2 - this can be overriden in customToolsSettings
-def_revitBuilds = "20220123_1515(x64), 20220520_1515(x64), 20220726_1500(x64)"
+# 2021.1.6, 2022.1.3, 2023.1.1 - this can be overriden in customToolsSettings
+def_revitBuilds = "20220123_1515(x64), 20220520_1515(x64), 20221122_1550(x64)"
 def_massMessagePath = "L:\\_i\\CTmassMessage\\mass_message.html"
 def_syncLogPath = "L:\\customToolslogs\\syncTimeLogs"
 def_openingLogPath = "L:\\customToolslogs\\openingTimeLogs"
