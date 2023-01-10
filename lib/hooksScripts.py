@@ -5,7 +5,7 @@ from customOutput import def_massMessagePath, def_syncLogPath, def_openingLogPat
 
 # version of CustomTools
 releasedVersion = "0.9.2"
-snapshot = "230102"
+snapshot = "230110"
 
 # logging to server
 def hooksLogger(log_string, doc):
@@ -104,8 +104,8 @@ def versionLogger(releasedVersion,snapshot):
   try:
     company_build = listFromString(user_config.CustomToolsSettings.revitBuilds)
     # just temporary for changing company build
-    if "20220520_1515(x64)" in company_build:
-      # 2021.1.6, 2022.1.3, 2023.0.2
+    if "20220520_1515(x64)" in company_build or "20220123_1515(x64)" in company_build:
+      # 2021.1.6, 2022.1.3, 2023.1.1
       user_config.CustomToolsSettings.revitBuilds = "20220123_1515(x64), 20220520_1515(x64), 20221122_1550(x64)"
       company_build = listFromString(user_config.CustomToolsSettings.revitBuilds)
 
@@ -113,7 +113,7 @@ def versionLogger(releasedVersion,snapshot):
   except:
     company_build = listFromString(def_revitBuilds)
 
-  # checking if revit build is inline with company standard
+  # checking if revit build does not meet company standard
   if build not in company_build:
     dialogBox(build)
 
