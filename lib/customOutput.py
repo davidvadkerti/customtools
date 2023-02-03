@@ -28,6 +28,8 @@ criticalWarnings = ['Elements have duplicate "Type Mark" values',
     'Elements have duplicate "Number" values',]
 
 # default paths for settings
+# this can be overriden by user in customToolsSettings.py
+# or by company config file
 def_hookLogs = "L:\\customToolslogs\\hooksLogs"
 def_revitBuildLogs = "L:\\customToolslogs\\versions.log"
 # 2021.1.6, 2022.1.3, 2023.1.1 - this can be overriden in customToolsSettings
@@ -37,6 +39,33 @@ def_syncLogPath = "L:\\customToolslogs\\syncTimeLogs"
 def_openingLogPath = "L:\\customToolslogs\\openingTimeLogs"
 def_dashboardsPath = "L:\\powerBI"
 def_language = 1
+
+# read the company config file if it does exist
+def company_conf():
+    # constructing the drive list
+    alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    drive_list = []
+    for i in alphabet:
+        drive_name = "".join((i,":\\"))
+        drive_list.append(drive_name)
+
+    config_values = {}
+    # checking every single letter as drive location A:\ B:\ C:\ etc.
+    for drive in drive_list:
+        try:
+            company_config_file = open(drive + "ct_config.ini","r")
+            configSetting = (company_config_file.readlines())
+            for line in configSetting:
+                # separating values from lines
+                keys = line.split(" = ")
+                # remove new lines - enter
+                keys[1] = keys[1].split("\n")[0]
+                # add values to dictionary
+                config_values.update({keys[0]:keys[1]})
+        # if there is no company config file, skip this step and use default values
+        except:
+            pass
+    return config_values
 
 # formating time in seconts to HHMMSS format
 def hmsTimer(timerSeconds):

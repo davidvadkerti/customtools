@@ -4,8 +4,8 @@ from customOutput import def_hookLogs, def_revitBuildLogs, def_revitBuilds
 from customOutput import def_massMessagePath, def_syncLogPath, def_openingLogPath, def_dashboardsPath
 
 # version of CustomTools
-releasedVersion = "0.9.2"
-snapshot = "230110"
+releasedVersion = "0.9.3"
+snapshot = "230203"
 
 # logging to server
 def hooksLogger(log_string, doc):
@@ -103,11 +103,11 @@ def versionLogger(releasedVersion,snapshot):
   # if parameter exists in config file
   try:
     company_build = listFromString(user_config.CustomToolsSettings.revitBuilds)
-    # just temporary for changing company build
-    if "20220520_1515(x64)" in company_build or "20220123_1515(x64)" in company_build:
-      # 2021.1.6, 2022.1.3, 2023.1.1
-      user_config.CustomToolsSettings.revitBuilds = "20220123_1515(x64), 20220520_1515(x64), 20221122_1550(x64)"
-      company_build = listFromString(user_config.CustomToolsSettings.revitBuilds)
+    # just temporary for changing company build - obsolete - use custom tools config file ct_config.ini
+    # if "20220520_1515(x64)" in company_build or "20220123_1515(x64)" in company_build:
+    #   # 2021.1.6, 2022.1.3, 2023.1.1
+    #   user_config.CustomToolsSettings.revitBuilds = "20220123_1515(x64), 20220520_1515(x64), 20221122_1550(x64)"
+    #   company_build = listFromString(user_config.CustomToolsSettings.revitBuilds)
 
   # if parameter doesnt exist in config file
   except:
